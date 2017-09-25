@@ -1,12 +1,11 @@
+
+<!--7591469-->
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><!--插入数学公式用的脚本，在下文中使用$$数学公式$$来插入数学公式-->
 博客中要分别讨论的java专题：
 >* Calendar类
 >* File类
 >* Number类
 
-
-
-# 测试文章的方式来看
 1. 计算机中字节（byte）是最小的存储单元，1byte=8bits。
 2. 内存：随机访问存储器（RAM）。内存中每一个字节都有其唯一的地址。
 3. 点距是指像素之间以毫米为单位的距离，点距越小，显示效果越好。
@@ -30,8 +29,10 @@
 
 13. 程序中事物的名字称为标识符，标识符组成：<br>首字母：字母、下划线、美元符号<br>其余：字母、下划线、美元符号、数字<br>不能是保留字或者true false null<br>长度任意<br>习惯上，字符$只用于机器自动生成的代码片中
 14. java数值类型：
+
+
 类型名|存储大小|Scnner对象方法|最大值|最小值|直接量表示
---|---|--
+--|---|---|---|---|---|
 byte|8位带符号数|nextByte()|Byte.MAX_VALUE|Byte.MIN_VALUE|
 short|16位带符号数|nextShort()|Short.MAX_VALUE|.MIN_VAULE|
 int|32位带符号数|nextInt()|Integer.MAX_VALUE|Integer.MIN_VAULE|
@@ -46,6 +47,8 @@ String||next()或nextLine()|
 
 
 15. JAVA数学运算：
+
+
 运算符|名字|示例
 --|---|--
 +|加|
@@ -60,6 +63,8 @@ Math.pow(a,b)|幂运算|$$a^b$$
 >为了提高可读性，java允许在数值直接量中两个数字之间添加下划线`long ssn=123_456L`
 >引用类型直接量的默认值是null
 >true和false是直接量；
+
+
 进制|表示|示例
 --|---|--
 二进制|0b或0B|0B1100110
@@ -69,6 +74,8 @@ Math.pow(a,b)|幂运算|$$a^b$$
 17.科学计数法：`123E-2`等同于$$123*10^{-2}$$
 18. java中int类型与Boolean类型之间无法进行（强制）转化。
 19. 布尔操作符
+
+
 操作符|名称|说明
 --|---|--
 ！|非|逻辑非
@@ -120,6 +127,8 @@ random()|返回0.0到1.0之间的double类型
 24. 将整数转化为char型数据时只用到该数据的低16位，其余的部分都被忽略。
 25. 0~FFFF内的所有十六进制正整数都可以隐式的转化为char类型。
 26. Character类中的方法：
+
+
 方法|描述
 --|---|--
 isDigit(ch)|如果指定的字符是一个数字，返回true
@@ -130,6 +139,8 @@ isUpperCase(ch)|大写字母
 toLowCaese(ch)|转化为小写字母
 toUpperCase(ch)|大写
 27. String对象的简单方法
+
+
 方法|描述
 --|---|--
 length()|返回字符串中的字符数
@@ -145,6 +156,8 @@ toCharArray()|将字符串转化为char型数组
 
 
 28. 字符串对象的比较方法
+
+
 方法|描述
 --|---|--
 equals(s1)|如果该字符串的内容与s1的相同，返回true
@@ -691,4 +704,4 @@ public class TestFileClass {
 118. 接口：接口是一种与类类似的结构，只包含常量和抽象方法。
 119. 类和接口之间的关系成为接口继承
 120. 接口中所有的数据域都是public static final，而且所有的方法都是public abstract，所以java允许忽略这些修饰符。
-121. 用于测试所有其他相关的内容，并没有出现第一次
+121. 这些东西真的不会损失的么
