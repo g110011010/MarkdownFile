@@ -1,9 +1,9 @@
-##Chapter2
-###2.1
+## Chapter2
+### 2.1
 1. 活动：活动是一种能够包含用户界面的组件，主要用于和用户进行交互。
-###2.2 手动创建一个活动
+### 2.2 手动创建一个活动
 1. 配置布局文件
-```android
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
@@ -27,7 +27,7 @@
 </LinearLayout>
 ```
 2. 在活动中加载布局
-	```android
+	```java
 	
 	import android.support.v7.app.AppCompatActivity;
 	import android.os.Bundle;
@@ -44,7 +44,7 @@
 	
 	```
 3. 在AndroidManifest 文件中注册活动
-```android
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!--所有的活动都要在此文件下注册才能够生效-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -77,7 +77,7 @@
 </manifest
 ```
 4. 使用Toast发送短小信息给用户
-```android
+```java
 package com.example.sf.activitytest;
 
 import android.support.v7.app.AppCompatActivity;
@@ -120,7 +120,7 @@ public class FirstActivity extends AppCompatActivity {
 ```
 #### 2.2.5 在活动中使用Menu
 1. 在res目录下创建一个menu文件夹，然后在此文件夹下创建一个菜单文件，命名为main
-```android
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <!--<item>标签用于创建某个具体的菜单项-->
@@ -135,13 +135,13 @@ public class FirstActivity extends AppCompatActivity {
 
 </menu>
 ```
-####2.2.6销毁当前对象
+#### 2.2.6销毁当前对象
 Activity类提供了finish方法用于销毁当前对象。
 ### 2.3
 1. Intent：Intent是Android程序中各个组件之间进行交互的一种重要方式，它不仅可以指明当前组件想要执行的动作，还可以在不同的组件之间传递数据。Intent一般可以用于启动活动，启动服务，发送广播等任务场景。
 2. Intent大致分为两种：显式Intent和隐式Intent
 * **显式活动**：
-```android
+```java
  /*
         * 点击按钮启动另外一个活动*/
         findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
@@ -157,7 +157,7 @@ Activity类提供了finish方法用于销毁当前对象。
         });
 ```
 * **隐式活动**：隐式活动并不明确指出我们想要启动哪一个活动，而是指定了一系列更为抽象的action和category等信息，然后交由系统去分析这个Intent，并帮助我们找出合适的活动（能够响应我们这Intent的活动）去启动
-```android
+```xml
  <activity android:name=".SecondActivity"
             android:label="this is second activity">
             <intent-filter>
@@ -171,7 +171,7 @@ Activity类提供了finish方法用于销毁当前对象。
         </activity>
 ```
 
-```android
+```java
      /*
         * 点击按钮启动另外一个活动*/
         findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
@@ -187,7 +187,7 @@ Activity类提供了finish方法用于销毁当前对象。
         });
 ```
 3. intent不仅可以启动自己程序内部的活动，还可以启动其它程序的活动，这使得Android系统中多个程序之间的功能共享成为了可能。
-```android
+```java
 //        点击按钮使用系统默认浏览器打开百度首页
         findViewById(R.id.baidu).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -212,7 +212,7 @@ Activity类提供了finish方法用于销毁当前对象。
         });
 ```
 设定自己的活动能够响应的隐式intent
-```android 
+```xml
  <activity android:name=".ThirdActivity">
         <!--在<intent-filter>标签中使用<data>标签可以更清楚的指明当前活动能够响应什么类型的数据-->
             <intent-filter>
@@ -229,7 +229,7 @@ Activity类提供了finish方法用于销毁当前对象。
 ```
 
 4. 使用Intent向下一个活动传递数据
-```android
+```java
 //向下一个活动传递数据
         /*
         * 点击按钮启动另外一个活动*/
@@ -340,7 +340,17 @@ protected void onCreate(Bundle savedInstanceState) {
             }
         });
 ```
-###2.4
+### 
+
+	* [Chapter2](#chapter2)
+		* [2.1](#21)
+		* [2.2 手动创建一个活动](#22-手动创建一个活动)
+			* [2.2.5 在活动中使用Menu](#225-在活动中使用menu)
+			* [2.2.6销毁当前对象](#226销毁当前对象)
+		* [2.3](#23)
+		* [2.4](#24)
+
+2.4
 1. android是通过任务来管理活动的。一个任务就是一组存储在栈中的活动的集合，这个栈也被称作返回栈。
 2. 启动一个新活动是将活动入栈的过程，按返回键是将栈顶活动销毁的过程。
 3. 每个活动在其生命周期都会有最多四种状态：
@@ -399,7 +409,7 @@ onResume()|**-**|
 
 6. 当活动进入停止状态（执行onStop()之后），活动是有可能被系统回收的，此时如果子活动要返回到这个已经被系统回收的活动，那么将会首先调用onCreate()方法。
 7. 活动一旦被系统回收，其中所有的临时数据均将会消失。这样会严重影响用户体验，为了解决这一问题，可以应用回调方法onSaveInstanceState(),该方法能保证活动在被系统回收之前一定会被调用。因此我们可以在这个方法中的Boundle参数对临时数据进行保存。
-```android
+```java
 //存入数据
   @Override
     protected void onSaveInstanceState(Bundle outState){
@@ -409,7 +419,7 @@ onResume()|**-**|
     }
 ```
 
-```android
+```java
 //读取数据
 
  @Override
