@@ -7,4 +7,7 @@ grammar_cjkRuby: true
 <!--Teacher Info:-->
 <!--email:lizhaoh888@bupt.edu.cn-->
 <!--Tel:15810470206-->
-<!--QQ:2457471851-->
+<!--QQ:2457471851null![enter description here][1]-->
+
+
+  [1]: ./attachments/AlgorithmDesign.pdf "AlgorithmDesign"
