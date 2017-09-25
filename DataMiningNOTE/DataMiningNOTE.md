@@ -1,1 +1,1 @@
-1. 大数据的特性（4V）:大量，高速，多样，真实
+1. 大数据的特性（4V）:大量（Volume），高速（Velocity），多样(Variety)，真实(Veracity)
