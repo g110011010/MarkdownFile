@@ -3,7 +3,7 @@
 1. 在交互式解释器中，可以使用print var_name 或者直接使用var_name输出变量，后者输出时会用单引号将变量内容括起来。
 2. 下划线（_）在解释器中表示最后一个表达式的值。
 3. print 语句与字符串操作符（%）结合使用，可以实现字符串替换功能。这一点和C语言中的printf()函数很相似。
-4. ![](http://img.blog.csdn.net/20170828115033585?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZzExMDAxMTAxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+4. ![](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329583760.jpg)
 ###2.2
 1. 使用raw_input()内建函数从用户那里获取输入。
 2. 对一个函数调用help内建函数即可得到他的帮助文档
@@ -57,7 +57,7 @@ bool()|
 ###2.7
 1. python中的字符串被定义为引号之间字符的集合可以使用索引操作符（[]）和切片操作符（[:]）来获得子字符串。
 2. 字符串有其特定的索引规则，第一个字符串的索引为0，最后一个索引为-1。
-![这里写图片描述](http://img.blog.csdn.net/20170830095811149?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZzExMDAxMTAxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584554.jpg)
 ###2.8 列表和元组
 1. 可以将列表和元组当成是普通的“数组”，但是列表和元组可以存储不同类型
 2. 列表元素用[]包裹，元素的个数及元素的值可以改变
@@ -66,7 +66,7 @@ bool()|
 1. 字典是python中的映射数据类型，工作原理类似于PErl中的关联数组或者哈希表，由键值对构成。几乎所有的python对象类型都可以作为键，一般以数字或者字符串最常用。
 2. 字典元素使用大括号包裹。
 
-![这里写图片描述](http://img.blog.csdn.net/20170831122000896?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZzExMDAxMTAxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584528.jpg)
 ###2.10 代码块及缩进对齐
 1. 代码块通过缩进对齐表达代码逻辑
 ###2.11 if语句
@@ -80,21 +80,21 @@ else:
 2. range函数
 3. len()函数
 4. enumrate()函数
-![这里写图片描述](http://img.blog.csdn.net/20170901202439813?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZzExMDAxMTAxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584542.jpg)
 
 ### 2.14 列表解析
 1. 表示你可以在一行中使用for循环将所有元素放入到一个列表中。
-2. 列表解析还能进行挑选合适的元素放入到列表中。![这里写图片描述](http://img.blog.csdn.net/20170901203109910?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZzExMDAxMTAxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+2. 列表解析还能进行挑选合适的元素放入到列表中。![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329586170.jpg)
 ### 2.15 文件和内建函数open(),file()
 1. 打开文件方式：`handle=open(file_name,access_mode='r')`,file_name变量是我们希望打开的字符串的名称，access_mode中‘r’表示读取，‘w’表示写入，‘a’表示添加，‘+’表示读写，‘b’表示二进制访问。默认为‘r’.如果open成功，一个文件对象句柄会被返回。所有后续文件操作都必须通过此文件句柄完成。
 2. 属性：属性是与数据有关的项目，属性可以使简单的数据值，也可是可执行对象，比如函数和方法
 ### 2.17 函数
-![这里写图片描述](http://img.blog.csdn.net/20170901205206484?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZzExMDAxMTAxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584762.jpg)
 1. 函数参数可以提供默认值，如果调用函数的时候没有提供参数，函数将以默认值调用。
-2. ![这里写图片描述](http://img.blog.csdn.net/20170901205618333?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZzExMDAxMTAxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+2. ![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329583707.jpg)
 ### 2.18 类
 1. 定义类：
-2. ![这里写图片描述](http://img.blog.csdn.net/20170901212145904?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZzExMDAxMTAxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+2. ![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584619.jpg)
 
 > * version是一个静态变量，它将被所有的实例以及四个方法所共享，其中每个实例可以对自己的静态变量重新赋值，赋值结果不会影响到其它的实例。通过类名调用静态变量属性对其进行赋值，效果将会影响到所有的对象。
 > * 当一个类实例被创建的时候，__init__()方法会被自动调用，在类实例创建完毕后执行，类似于构造器。__init__（）可以被当做是一个构造器，但是他和其它语言的构造器不同，他并不创建实例，他仅仅是你的对象创建后执行的第一个方法。
@@ -102,7 +102,7 @@ else:
 > 
 
 3. 使用类：
-![这里写图片描述](http://img.blog.csdn.net/20170901212301923?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZzExMDAxMTAxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584820.jpg)
 
 ### 2.19 模块
 1. 模块是一种组织形式，它将彼此有关系的python代码组织到一个个独立文件当中。模块可以包含可执行代码，函数或者类或者这些东西的集合。
@@ -362,14 +362,14 @@ obj in seq|判断元素是否在序列中
 > 对于字符串可以使用一个join方法。
 
 使用：
-![这里写图片描述](http://img.blog.csdn.net/20170923153549363?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZzExMDAxMTAxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584809.jpg)
 
 使用extend方法合并字符串
-![这里写图片描述](http://img.blog.csdn.net/20170923154401635?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZzExMDAxMTAxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584666.jpg)
 进行翻转的切片操作：
-![这里写图片描述](http://img.blog.csdn.net/20170923154804972?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZzExMDAxMTAxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584512.jpg)
 
-![这里写图片描述](http://img.blog.csdn.net/20170923155154765?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZzExMDAxMTAxMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584406.jpg)
 
 3. 内建函数BIF:
 	1. 序列本身就包含了迭代的概念，之所以会这样，是因为迭代这个概念就是从序列，迭代器，或者其他支持迭代操作的对象中泛化得来的。
@@ -382,6 +382,8 @@ obj in seq|判断元素是否在序列中
 	unicode(obj)|把对象转换为Unicode字符串（使用默认编码）
 	tuple(iter)|把一个可迭代对象转化为一个元组对象。
 	3. 序列类型内建函数
+
+
 	函数名|功能
 	--|---|--
 	enumerate(iter)|接受一个可迭代对象作为参数，返回一个enumerate对象（同时也是一个迭代器），该对象生成由item每个元素的index值和item值组成的元组
@@ -392,8 +394,53 @@ obj in seq|判断元素是否在序列中
 	sorted(iter)|返回一个可迭代对象作为参数，返回一个有序的列表
 	还有两个，以后添加
 
-	
-	
+
+### 6.2 字符串
+1. Python中单引号和双引号的作用是一样的。
+2. Python中没有字符这个类型，而是用长度为1的字符串来表示这个概念。
+3. 字符串也是一种序列，可以执行序列的切片操作。
+4. 跟数字类型一样，字符串类型也是不可变的，所以你要改变一个字符串就必须创建一个新的串的方式来实现。
+
+### 6.3 字符串和操作符
+#### 6.3.1 标准类型操作符
+
+``` python
+>>> a='abc'
+>>> b="lmn"
+>>> c='xyz'
+>>> a<b
+True
+>>> b==c
+False
+>>> a<c and c=='xyz'
+True
+```
+#### 6.3.2 序列操作符切片
+1. 正向索引：索引值开始于0（第一个字符），结束于总长度减一
+2. 反向索引：索引值开始于-1（最后一个字符），结束于负的总长度（第一个字符）
+3. 默认索引：如果第一个值和最后一个值都没有指定的话，则分别以字符串的第一个和最后一个索引值作为默认值。
+4. ![enter description here][2]
 
 
-  [1]: ./images/1506269806873.jpg
+  5. 成员操作符（in，not in）用于判断一个字符或者一个子串（中的字符）是否出现在另一个字符串中。出现则返回TRUE，否则返回FALSE
+  6. ![enter description here][3]
+
+
+  [1]: https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329583176.jpg
+  [2]: ./images/1506331053218.jpg
+  [3]: ./images/1506331340088.jpg
+  
+  7. String 模块中预定义的字符串：
+  
+
+``` python
+>>> import string
+>>> string.uppercase
+'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+>>> string.lowercase
+'abcdefghijklmnopqrstuvwxyz'
+>>> string.letters
+'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+>>> string.digits
+'0123456789'
+```
