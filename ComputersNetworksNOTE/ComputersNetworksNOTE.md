@@ -39,6 +39,8 @@ grammar_cjkRuby: true
 --|---|--
 personal area network|1m|蓝牙通讯，红外通讯，智能手表
 Local area network|1Km|
+MAN|
+WAN|
 
 7. Chnnel allocation
 
