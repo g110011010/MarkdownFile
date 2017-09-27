@@ -252,3 +252,22 @@ const int sz=get_size();//不是，值在运行的时候才能够得到
 4. 新标准允许定义一种特殊的constexpr函数，这种函数应该足够简单以使得编译时就可以计算出其结果。这样的congstexpr函数可以用来初始化constexpr变量。
 5. 算数类型，引用和指针都属于字面值常量可以声明为constexpr.自定义类，IO库，string类型不属于字面值类型，也就不能被定义为constexpr。
 6. 在constexpr中如果定义了一个指针，那么这个限定符仅仅对这个指针本身有效，与这个指针所指向的对象无关。
+
+### 2.5 处理类型
+#### 2.5.1 类型别名
+1. 类型别名是一个名字，它是某种类型的同义词。
+2. 有两种方法定义类型别名：一种是传统的使用typedef关键字：`typedef double wages`wages是double的别名`typedef wages base,*p;`base是double的别名，*p是double*的别名。第二种是使用别名声明（alias declaration）.`using s=int ;
+using ps=int*;`s是int的别名，ps是int*的别名。
+#### auto类型说明符
+1. auto类型说明符能让编译器替我们分析表达式所属的类型。
+2. 编译器推断出来的auto值有时候和初始值的类型并不完全一样，编译器会适当的改变结果类型使其更符合初始化规则。
+3. auto一般会忽略掉顶层const,同时底层const则会保留下来，如果希望推断出的auto类型是一个顶层const需要明确指出
+
+``` c++
+cosnt int ci=i,&cr=ci;
+auto b=ci;//b是一个整数（ci的顶层const特性被忽略掉了）
+auto c=cr;//c是一个整数（cr是ci的别名，ci本身是一个顶层const）
+auto d=&i;//d是一个整形指针（整数的地址就是指向整数的指针）
+auto e=&ci;//e是一个指向整形常量的指针（对常量对象取地址是一种底层const）
+const auto f=ci;
+```
