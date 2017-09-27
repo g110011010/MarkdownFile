@@ -625,3 +625,37 @@ m.n|m是显示的最小宽度,n是小数点后的位数
 
 
 #### 字符串模板:更简单的替代品
+
+
+``` python
+>>> from string import Template
+>>> s=Template('There are ${howmany} Quotation Symbols')
+
+>>> print s.substitute(howmany=3)
+
+There are 3 Quotation Symbols
+>>> s1=Template('There are ${a} ${b} ${c}')
+
+>>> print s1.substitute(b=5,a=7,c=12)
+
+There are 7 5 12
+>>> print s.safe_substitute(howmany='Hello',a=9)
+
+There are Hello Quotation Symbols
+>>> print s.substitute(howmany=3,a=9)#多出参数的时候不会报错
+
+There are 3 Quotation Symbols
+>>> print s1.substitute(a=2)#少参数的时候会报错
+
+Traceback (most recent call last):
+  File "<pyshell#8>", line 1, in <module>
+    print s1.substitute(a=2)
+  File "C:\Python27\lib\string.py", line 176, in substitute
+    return self.pattern.sub(convert, self.template)
+  File "C:\Python27\lib\string.py", line 166, in convert
+    val = mapping[named]
+KeyError: 'b'
+>>> print s1.safe_substitute(a=3)#更安全，不会报错
+There are 3 ${b} ${c}
+>>> 
+```
