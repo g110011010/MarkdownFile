@@ -1,9 +1,9 @@
-##Chapter2
-###2.1
+## Chapter2
+### 2.1
 1. 在交互式解释器中，可以使用print var_name 或者直接使用var_name输出变量，后者输出时会用单引号将变量内容括起来。
 2. 下划线（_）在解释器中表示最后一个表达式的值。
 3. print 语句与字符串操作符（%）结合使用，可以实现字符串替换功能。这一点和C语言中的printf()函数很相似。
-4. ![](https://www.github.com/g110011010/MarkdownFile/raw/master/StoryWriter/1506310273751.jpg)
+4. ![](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329583760.jpg)
 ###2.2
 1. 使用raw_input()内建函数从用户那里获取输入。
 2. 对一个函数调用help内建函数即可得到他的帮助文档
@@ -12,6 +12,8 @@
 1.python中注释是以#开头，注释可以在一行的任何地方开始，解释器会忽略该行#之后的任何内容。
 2. 有一种叫做文档字符串的特别注释，你可以在模块、类或者函数的起始添加一个字符串，起到在线文档的功能。文档字符串可以在运行时访问，也可以用来生成自动文档。
 ###2.4 操作符
+
+
 操作符|描述
 --|---|--
 +|
@@ -35,6 +37,8 @@
 
 
 ##内建函数
+
+
 函数|描述
 --|---|--
 raw_input()|从用户那里获取输入数据
@@ -45,6 +49,8 @@ complex()|
 bool()|
 ###2.6
 1. Python支持五种基本数字类型，其中有三种是整型类型
+
+
 类型|符号|实例
 --|----|--
 有符号整型|int|1010 84 -123
@@ -57,7 +63,7 @@ bool()|
 ###2.7
 1. python中的字符串被定义为引号之间字符的集合可以使用索引操作符（[]）和切片操作符（[:]）来获得子字符串。
 2. 字符串有其特定的索引规则，第一个字符串的索引为0，最后一个索引为-1。
-![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/StoryWriter/1506310273753.jpg)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584554.jpg)
 ###2.8 列表和元组
 1. 可以将列表和元组当成是普通的“数组”，但是列表和元组可以存储不同类型
 2. 列表元素用[]包裹，元素的个数及元素的值可以改变
@@ -66,7 +72,7 @@ bool()|
 1. 字典是python中的映射数据类型，工作原理类似于PErl中的关联数组或者哈希表，由键值对构成。几乎所有的python对象类型都可以作为键，一般以数字或者字符串最常用。
 2. 字典元素使用大括号包裹。
 
-![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/StoryWriter/1506310273754.jpg)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584528.jpg)
 ###2.10 代码块及缩进对齐
 1. 代码块通过缩进对齐表达代码逻辑
 ###2.11 if语句
@@ -80,21 +86,21 @@ else:
 2. range函数
 3. len()函数
 4. enumrate()函数
-![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/StoryWriter/1506310273894.jpg)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584542.jpg)
 
 ### 2.14 列表解析
 1. 表示你可以在一行中使用for循环将所有元素放入到一个列表中。
-2. 列表解析还能进行挑选合适的元素放入到列表中。![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/StoryWriter/1506310273890.jpg)
+2. 列表解析还能进行挑选合适的元素放入到列表中。![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329586170.jpg)
 ### 2.15 文件和内建函数open(),file()
 1. 打开文件方式：`handle=open(file_name,access_mode='r')`,file_name变量是我们希望打开的字符串的名称，access_mode中‘r’表示读取，‘w’表示写入，‘a’表示添加，‘+’表示读写，‘b’表示二进制访问。默认为‘r’.如果open成功，一个文件对象句柄会被返回。所有后续文件操作都必须通过此文件句柄完成。
 2. 属性：属性是与数据有关的项目，属性可以使简单的数据值，也可是可执行对象，比如函数和方法
 ### 2.17 函数
-![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/StoryWriter/1506310273837.jpg)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584762.jpg)
 1. 函数参数可以提供默认值，如果调用函数的时候没有提供参数，函数将以默认值调用。
-2. ![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/StoryWriter/1506310273755.jpg)
+2. ![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329583707.jpg)
 ### 2.18 类
 1. 定义类：
-2. ![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/StoryWriter/1506310274229.jpg)
+2. ![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584619.jpg)
 
 > * version是一个静态变量，它将被所有的实例以及四个方法所共享，其中每个实例可以对自己的静态变量重新赋值，赋值结果不会影响到其它的实例。通过类名调用静态变量属性对其进行赋值，效果将会影响到所有的对象。
 > * 当一个类实例被创建的时候，__init__()方法会被自动调用，在类实例创建完毕后执行，类似于构造器。__init__（）可以被当做是一个构造器，但是他和其它语言的构造器不同，他并不创建实例，他仅仅是你的对象创建后执行的第一个方法。
@@ -102,7 +108,7 @@ else:
 > 
 
 3. 使用类：
-![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/StoryWriter/1506310274230.jpg)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584820.jpg)
 
 ### 2.19 模块
 1. 模块是一种组织形式，它将彼此有关系的python代码组织到一个个独立文件当中。模块可以包含可执行代码，函数或者类或者这些东西的集合。
@@ -230,6 +236,8 @@ readFile()
 上面三个特性在对象创建的时候就被赋值了，除了值之外，其它两个属性都是只读的。对于新式类型和类，对象的类型也是可以改变的，但是并不推荐这样做。
 2. 对象属性：某些对象有属性、值和相关联的可执行代码，比如方法。Python使用句点（.）标记法来访问属性。属性包括响应对象的名字等。
 ### 4.2 标准类型
+
+
 类型|Eng
 --|---|--
 整型|Integer
@@ -295,6 +303,8 @@ displayNumberType(1211111111111111111111111111111L)
 2. 数值对象是不可改变对象,更新数值对象是生成一个新的数值对象,并得到他的引用.
 3. 可以使用del语句删除一个对象的引用.
 4. 复数的内建属性:
+
+
 属性|描述
 --|---|--
 num.real|该复数的实部(float)
@@ -302,6 +312,8 @@ num.image|该复数的虚部(float)
 num.conjugate()|返回该复数的共轭复数(complex)
 5. 对于存在多种数值类型的操作数的算术表达式,将首先将所有表达式转化为统一类型后计算,转换的优先级:复数 浮点数 长整型 整型.
 6. 下列操作符,从上到下,优先级依次降低:
+
+
 操作符|描述
 --|--
 **|幂运算
@@ -313,7 +325,10 @@ num.conjugate()|返回该复数的共轭复数(complex)
 %|
 +|
 -|
+
 7. 位操作符(只适用于整型),负数会被当做正数的二进制补码来进行处理
+
+
 位操作符|功能
 --|---|--
 ~num|单目运算,对数的每一位取反,结果是-(num+1)
@@ -351,8 +366,6 @@ choice()|随机返回给定序列中的一个元素
 ### 6.1 序列
 1. 序列类型有着相同的访问模式：它的每一个元素可以通过指定一个偏移量来找到，而多个元素可以通过切片操作的方式一次性得到。
 2. 序列类型操作符：
-
-
 序列操作符|作用
 --|---|--
 seq[ind]|获取序列中的第ind个元素
@@ -364,14 +377,14 @@ obj in seq|判断元素是否在序列中
 > 对于字符串可以使用一个join方法。
 
 使用：
-![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/StoryWriter/1506310274248.jpg)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584809.jpg)
 
 使用extend方法合并字符串
-![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/StoryWriter/1506310274080.jpg)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584666.jpg)
 进行翻转的切片操作：
-![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/StoryWriter/1506310274119.jpg)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584512.jpg)
 
-![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/StoryWriter/1506310274083.jpg)
+![这里写图片描述](https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329584406.jpg)
 
 3. 内建函数BIF:
 	1. 序列本身就包含了迭代的概念，之所以会这样，是因为迭代这个概念就是从序列，迭代器，或者其他支持迭代操作的对象中泛化得来的。
@@ -396,40 +409,184 @@ obj in seq|判断元素是否在序列中
 	sorted(iter)|返回一个可迭代对象作为参数，返回一个有序的列表
 	还有两个，以后添加
 
-	
-	
+
+----------
 
 
-  [1]: https://www.github.com/g110011010/MarkdownFile/raw/master/StoryWriter/1506310273243.jpg
+### 6.2 字符串
+1. Python中单引号和双引号的作用是一样的。
+2. Python中没有字符这个类型，而是用长度为1的字符串来表示这个概念。
+3. 字符串也是一种序列，可以执行序列的切片操作。
+4. 跟数字类型一样，字符串类型也是不可变的，所以你要改变一个字符串就必须创建一个新的串的方式来实现。
+
+
+----------
+
+
+### 6.3 字符串和操作符
+#### 6.3.1 标准类型操作符
+
+``` python
+>>> a='abc'
+>>> b="lmn"
+>>> c='xyz'
+>>> a<b
+True
+>>> b==c
+False
+>>> a<c and c=='xyz'
+True
+```
+#### 6.3.2 序列操作符切片
+1. 正向索引：索引值开始于0（第一个字符），结束于总长度减一
+2. 反向索引：索引值开始于-1（最后一个字符），结束于负的总长度（第一个字符）
+3. 默认索引：如果第一个值和最后一个值都没有指定的话，则分别以字符串的第一个和最后一个索引值作为默认值。
+4. ![enter description here][2]
+
+
+  5. 成员操作符（in，not in）用于判断一个字符或者一个子串（中的字符）是否出现在另一个字符串中。出现则返回TRUE，否则返回FALSE
+  6. ![enter description here][3]
+
+
+  [1]: https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329583176.jpg
+  [2]: ./images/1506331053218.jpg
+  [3]: ./images/1506331340088.jpg
   
-###   只适用于字符串的操作符
-#### 格式化操作符(%)
-1. 字符串格式化操作符
+  7. String 模块中预定义的字符串：
+  
 
-| 格式化字符 | 转换方式                        |
-| ---------- | ------------------------------- |
-| %c         | 转换成字符(ASCII码值)           |
-| %r         | 优先用repr()函数进行字符串转换  |
-| %s         | 优先使用str()函数进行字符串转换 |
-| %d/%i      | 转成有符号十进制数              |
-| %u         | 转成无符号十进制数              |
-| %o         | 转成无符号八进制数              |
-| %x/%X      | 转成无符号十六进制数            |
-| %e/%E      | 转成科学计数法                  |
-| %f/%F      | 转成浮点型                      |
-| %g/%G      |  %e和%f%E和%F的缩写                               |
-|%%|输出%|
-2. 格式化操作符辅助指令
+``` python
+>>> import string
+>>> string.uppercase
+'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+>>> string.lowercase
+'abcdefghijklmnopqrstuvwxyz'
+>>> string.letters
+'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+>>> string.digits
+'0123456789'
+```
+8. for-else语句和while-else语句：当for循环或者while循环正常执行完毕的时候，else块中的语句将会得到执行，否则else语句不会得到执行：
 
-符号|作用
---|---|--
-*|定义宽度或者小数点精度
--|用作左对齐
-+|在正数前面显示加号(+)
-<sp>|在正数前面显示空格
-#|在八进制前面显示零,在十六进制前面显示'0x'或者'0X'
-0|显示的数字前面填充的是0而不是默认的空格
-%|'%%'输出单一的'%'
-(var)|映射变量(字典参数)
-m.n|m是显示的最小宽度,n是小数点后的位数
-#### 字符串模板:更简单的替代品
+``` python
+def forElse(char,str):
+    for c in str:
+        if char == c:
+            print 'catch'
+            break
+    else:
+        print 'no \'d\'in a'
+a='abcdefg'
+c1='f'
+c2='h'
+print 'test1:'
+# for循环未能正常执行完毕，break退出循环
+forElse(c1,a)
+print 'test2:'
+# for 循环正常执行完毕，else中语句被执行
+forElse(c2,a)
+
+
+输出：
+test1:
+catch
+test2:
+no 'd'in a
+```
+``` python
+#encoding=utf-8
+def whileElse(char,str):
+    length=0
+    while length<len(str):
+        # 这种写法比较低效，因为每次循环都要计算一次长度。最好先计算一次长度然后做一下保存
+        if char==str[length]:
+            print 'catch'
+            break
+        length+=1
+    else:
+        print 'no \'d\'in a'
+a='abcdefg'
+c1='f'
+c2='h'
+whileElse(c1,a)
+whileElse(c2,a)
+
+输出：
+catch
+no 'd'in a
+```
+==关于变量作用域的发现==
+
+``` python
+def test():
+    for c in a:
+        print c
+a='abcdef'
+test()
+
+输出：
+a
+b
+c
+d
+e
+f
+```
+``` python 
+def test():
+    a='fsdgfd'
+    for c in a:
+        print c
+a='abcdef'
+test()
+
+输出：
+f
+s
+d
+g
+f
+d
+
+```
+1. python 中没有块级域。在if，while或者其他地方定义的变量，在if或者while"块“的外面仍然能够使用。
+
+``` python
+for a in range(1):
+    name="Hello"
+print name
+```
+2. 局部作用域：函数块有着自己的局部作用域，（应该是在调用某个函数的时候，在栈中为这个函数开辟一个作用域，也就是函数入栈，然后函数在执行的过程中，使用的变量从本作用域中的查找，如果本作用域中没有，就到调用它的那个作用域中去查找，以此类推，直到最后查找失败报错。当函数执行完毕，本作用域从栈中移除，域中的所有变量丢失，所以在返回到父作用域中执行后，将无法再访问该作用域中的内容）
+3. 作用域链：，Python中有作用域链，变量会由内到外找，先去自己作用域去找，自己没有再去上级去找，直到找不到报错。在函数未执行之前，作用域已经形成了，作用域链也生成了。
+
+``` python
+
+name = "lzl"
+
+def f1():
+    print(name)
+
+def f2():
+    name = "eric"
+    f1()
+
+f2()
+
+输出：
+lzl
+作用域链是在函数执行前形成的
+```
+9. 字符串连接：
+
+``` python
+>>> a='hello'+' '+'world'
+>>> a
+'hello world'
+>>> b='hello'' ''world'
+>>> b
+'hello world'
+>>> c="hello"' '"world"
+>>> c
+'hello world'
+```
+10. 如果一个普通字符串和一个Unicode字符串做连接处理。Python会在连接操作前首先把普通字符串转化为Unicode字符串。
