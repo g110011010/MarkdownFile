@@ -448,10 +448,6 @@ True
   6. ![enter description here][3]
 
 
-  [1]: https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329583176.jpg
-  [2]: ./images/1506331053218.jpg
-  [3]: ./images/1506331340088.jpg
-  
   7. String 模块中预定义的字符串：
   
 
@@ -622,40 +618,36 @@ lzl
 %|'%%'输出单一的'%'
 (var)|映射变量(字典参数)
 m.n|m是显示的最小宽度,n是小数点后的位数
-
-
 #### 字符串模板:更简单的替代品
+miss
+
+### 6.5 内建函数
+#### 6.5.1 标准类型函数 cmp()
+#### 6.5.2 序列类型函数 
+函数|作用
+len()|返回字符串的字符数
+max()|返回字符串中最大的字符（按ASCII码表）
+min()|最小
+enumarate()|
+zip()|
+![enter description here][4]
 
 
-``` python
->>> from string import Template
->>> s=Template('There are ${howmany} Quotation Symbols')
+![enter description here][5]
 
->>> print s.substitute(howmany=3)
 
-There are 3 Quotation Symbols
->>> s1=Template('There are ${a} ${b} ${c}')
-
->>> print s1.substitute(b=5,a=7,c=12)
-
-There are 7 5 12
->>> print s.safe_substitute(howmany='Hello',a=9)
-
-There are Hello Quotation Symbols
->>> print s.substitute(howmany=3,a=9)#多出参数的时候不会报错
-
-There are 3 Quotation Symbols
->>> print s1.substitute(a=2)#少参数的时候会报错
-
-Traceback (most recent call last):
-  File "<pyshell#8>", line 1, in <module>
-    print s1.substitute(a=2)
-  File "C:\Python27\lib\string.py", line 176, in substitute
-    return self.pattern.sub(convert, self.template)
-  File "C:\Python27\lib\string.py", line 166, in convert
-    val = mapping[named]
-KeyError: 'b'
->>> print s1.safe_substitute(a=3)#更安全，不会报错
-There are 3 ${b} ${c}
->>> 
-```
+  [1]: https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329583176.jpg
+  [2]: ./images/1506331053218.jpg
+  [3]: ./images/1506331340088.jpg
+  [4]: ./images/1506609088747.jpg
+  [5]: ./images/1506609208403.jpg
+  
+####   6.5.3 字符串类型函数
+函数|描述
+--|---|--
+raw_input()|使用给定字符串提示用户输入并将这个输入返回
+str()|接受任意类型对象，并创建该对象的可打印字符串表示
+unicode()|接受任意类型对象，并创建该对象的Unicode的字符串表示
+chr()|用一个范围在range(256)内的整数作为参数，返回一个对应的字符
+unichr()|与chr()作用相同，只不过返回的是Unicode（）字符
+ord()|上面的两个函数的逆过程
