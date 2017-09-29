@@ -651,3 +651,22 @@ unicode()|接受任意类型对象，并创建该对象的Unicode的字符串表
 chr()|用一个范围在range(256)内的整数作为参数，返回一个对应的字符
 unichr()|与chr()作用相同，只不过返回的是Unicode（）字符
 ord()|上面的两个函数的逆过程
+### 6.6 字符串内建函数
+1. 字符串类型内建函数
+
+方法|描述
+--|---|--
+string.capitailze()|把字符串的第一个字符大写
+string.center(width)|返回一个原字符居中，并使用空格填充至长度width的新字符串
+String.count(str,beg=0,end=len(string))|返回str在字符串中从位置beg到位置end范围内出现的次数
+string.decode(encoding='UTF-8',error='strict')|以指定的编码方式解码String，如果出错默认报一个ValueError异常，除非error指定的是ignore或者replace
+string.encode(encoding='UTF-8',error='strict')|与上面相似，不过是编码过程
+String.endwith(str,beg=0,end=len(string))|返回str是否为字符串从位置beg到位置end范围的结尾
+String.expandtabs(tabsize=8)|把字符串中的tab符号转化为空格，默认转化的空格数为8
+String.find(str,beg=0,end=len(string))|检查字符串从位置beg到位置end范围是否有字符串str,如果有返回开始的索引值，没有则返回-1
+String.index(str,beg=0,end=len(string))|与find()一样，只不过如果不存在就会报一个异常
+string.isalnum()|如果字符串至少包含一个字符并且所有的字符都是字母或者数字则返回true否则返回false
+string.isalpha()|如果字符串至少包含一个字符并且所有的字符都是字母则返回true，否则返回false
+String.isdecimal()|如果String只包含十进制数字则返回true，否则返回false
+String.digit()|如果String只包含数字则返回true，否则返回false
+string.islower()|
