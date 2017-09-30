@@ -183,7 +183,17 @@ P2P|对等|音乐共享
 	* 由电话公司经营的蜂窝网络
 	* 基于802.11标准的==无线热点（hotspot）==
 
+2. ==固定无线（fixed wireless）==和==移动无线（mobile wireless）==之间的区别。
+
+![enter description here][4]
+
+3. ==近场通讯（NFC，near field communication）==：手机可以充当RFIC智能卡与RFIC读写器进行交互。
+4. ==传感器网络（sensor network）==：由能够感知到现实世界的节点组成
+
+#### 1.1.4 社会问题
+1. 
 
   [1]: ./images/1506783598392.jpg
   [2]: ./images/1506784220420.jpg
   [3]: ./images/1506784391294.jpg
+  [4]: ./images/1506785828580.jpg
