@@ -678,11 +678,11 @@ string.split(str="",num=string.count(str))|以str为分隔符切片String，如�
 ``` python,capitalize()
 num='1234'
 string0='abcd'
-numStr='123abc'
-strNum='abc123'
 string1='ABCD'
 string2='AbCd'
 string3='aBcD'
+numStr='123abc'
+strNum='abc123'
 strNum1='Abc123'
 char='@!asd32'
 test=[num,string0,string1,string2,string3,numStr,strNum,strNum1,char]
@@ -711,11 +711,11 @@ Abc123
 #encoding=utf-8
 num='1234'
 string0='abcd'
-numStr='123abc'
-strNum='abc123'
 string1='ABCD'
 string2='AbCd'
 string3='aBcD'
+numStr='123abc'
+strNum='abc123'
 strNum1='Abc123'
 char='@!asd32'
 test=[num,string0,string1,string2,string3,numStr,strNum,strNum1,char]
@@ -734,11 +734,11 @@ for i in test:
 import string
 num='1234'
 string0='abcd'
-numStr='123abc'
-strNum='abc123'
 string1='ABCD'
 string2='AbCd'
 string3='aBcD'
+numStr='123abc'
+strNum='abc123'
 strNum1='Abc123'
 char='@!asd32'
 test=[num,string0,string1,string2,string3,numStr,strNum,strNum1,char]
@@ -765,11 +765,11 @@ for i in test:
 import string
 num='1234'
 string0='abcd'
-numStr='123abc'
-strNum='abc123'
 string1='ABCD'
 string2='AbCd'
 string3='aBcD'
+numStr='123abc'
+strNum='abc123'
 strNum1='Abc123'
 char='@!asd32'
 test=[num,string0,string1,string2,string3,numStr,strNum,strNum1,char]
@@ -795,11 +795,11 @@ Abc123
 import string
 num='1234'
 string0='abcd'
-numStr='123abc'
-strNum='abc123'
 string1='ABCD'
 string2='AbCd'
 string3='aBcD'
+numStr='123abc'
+strNum='abc123'
 strNum1='Abc123'
 char='@!asd32'
 test=[num,string0,string1,string2,string3,numStr,strNum,strNum1,char]
@@ -871,11 +871,11 @@ ValueError: substring not found
 import string
 num='1234'
 string0='abcd'
-numStr='123abc'
-strNum='abc123'
 string1='ABCD'
 string2='AbCd'
 string3='aBcD'
+numStr='123abc'
+strNum='abc123'
 strNum1='Abc123'
 char='@!asd32'
 test=[num,string0,string1,string2,string3,numStr,strNum,strNum1,char]
@@ -891,6 +891,44 @@ True
 True
 True
 False
+```
+
+
+----------
+
+``` python
+#encoding=utf-8
+import string
+num='1234'
+string0='abcd'
+string1='ABCD'
+string2='AbCd'
+string3='aBcD'
+numStr='123abc'
+strNum='abc123'
+strNum1='Abc123'
+char='@!asd32'
+test=[num,string0,string1,string2,string3,numStr,strNum,strNum1,char]
+for i in test:
+    print i.isalpha() 
+结果：
+False
+True
+True
+True
+True
+False
+False
+False
+False
+```
+
+
+----------
+
+``` python，isdecimal()
+出错
+enter code here
 ```
 
 
