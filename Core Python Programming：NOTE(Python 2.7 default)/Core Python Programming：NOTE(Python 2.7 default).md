@@ -636,12 +636,6 @@ zip()|
 ![enter description here][5]
 
 
-  [1]: https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329583176.jpg
-  [2]: ./images/1506331053218.jpg
-  [3]: ./images/1506331340088.jpg
-  [4]: ./images/1506609088747.jpg
-  [5]: ./images/1506609208403.jpg
-  
 ####   6.5.3 字符串类型函数
 函数|描述
 --|---|--
@@ -661,7 +655,7 @@ string.center(width)|返回一个原字符居中，并使用空格填充至长�
 String.count(str,beg=0,end=len(string))|返回str在字符串中从位置beg到位置end范围内出现的次数
 string.decode(encoding='UTF-8',error='strict')|以指定的编码方式解码String，如果出错默认报一个ValueError异常，除非error指定的是ignore或者replace
 string.encode(encoding='UTF-8',error='strict')|与上面相似，不过是编码过程
-String.endwith(str,beg=0,end=len(string))|返回str是否为字符串从位置beg到位置end范围的结尾
+String.endswith(str,beg=0,end=len(string))|返回str是否为字符串从位置beg到位置end范围的结尾
 String.expandtabs(tabsize=8)|把字符串中的tab符号转化为空格，默认转化的空格数为8
 String.find(str,beg=0,end=len(string))|检查字符串从位置beg到位置end范围是否有字符串str,如果有返回开始的索引值，没有则返回-1
 String.index(str,beg=0,end=len(string))|与find()一样，只不过如果不存在就会报一个异常
@@ -675,4 +669,238 @@ string.join(seq)|以String作为分隔符，将序列seq中的所有元素合并
 string.lower()|转换String中所有大写字符为小写
 string.split(str="",num=string.count(str))|以str为分隔符切片String，如果num有指定值，则仅分割num个子字符串
 
+
+----------
+
+
+![用于函数测试的字符串][6]
+
+``` python,capitalize()
+num='1234'
+string0='abcd'
+numStr='123abc'
+strNum='abc123'
+string1='ABCD'
+string2='AbCd'
+string3='aBcD'
+strNum1='Abc123'
+char='@!asd32'
+test=[num,string0,string1,string2,string3,numStr,strNum,strNum1,char]
+for i in test:
+    print i.capitalize()
+	#下面的语句与上一句效果相同
+	#import string
+	#string.capitalize(i)
+	
+输出结果：
+1234
+Abcd
+Abcd
+Abcd
+Abcd
+123abc
+Abc123
+Abc123
+@!asd32
+```
+
+
+----------
+
+``` python,center()
+#encoding=utf-8
+num='1234'
+string0='abcd'
+numStr='123abc'
+strNum='abc123'
+string1='ABCD'
+string2='AbCd'
+string3='aBcD'
+strNum1='Abc123'
+char='@!asd32'
+test=[num,string0,string1,string2,string3,numStr,strNum,strNum1,char]
+for i in test:
+    print i.center(100)  #填充100个空格 
+```
+`结果：`
+
+![enter description here][7]
+
+
+----------
+
+``` python,count()
+#encoding=utf-8
+import string
+num='1234'
+string0='abcd'
+numStr='123abc'
+strNum='abc123'
+string1='ABCD'
+string2='AbCd'
+string3='aBcD'
+strNum1='Abc123'
+char='@!asd32'
+test=[num,string0,string1,string2,string3,numStr,strNum,strNum1,char]
+for i in test:
+    print string.count(i,'c',0,len(i))  
+	
+结果：
+0
+1
+0
+0
+1
+1
+1
+1
+0
+```
+
+
+----------
+
+``` python,decode()
+#encoding=utf-8
+import string
+num='1234'
+string0='abcd'
+numStr='123abc'
+strNum='abc123'
+string1='ABCD'
+string2='AbCd'
+string3='aBcD'
+strNum1='Abc123'
+char='@!asd32'
+test=[num,string0,string1,string2,string3,numStr,strNum,strNum1,char]
+for i in test:
+    print i.decode('ASCII','strict')
+	
+结果：
+1234
+abcd
+ABCD
+AbCd
+aBcD
+123abc
+abc123
+Abc123
+@!asd32
+```
+
+
+----------
+``` python,encode()
+#encoding=utf-8
+import string
+num='1234'
+string0='abcd'
+numStr='123abc'
+strNum='abc123'
+string1='ABCD'
+string2='AbCd'
+string3='aBcD'
+strNum1='Abc123'
+char='@!asd32'
+test=[num,string0,string1,string2,string3,numStr,strNum,strNum1,char]
+for i in test:
+    print i.encode('ASCII','strict')
+	
+结果：
+1234
+abcd
+ABCD
+AbCd
+aBcD
+123abc
+abc123
+Abc123
+@!asd32
+```
+
+
+----------
+
+``` python,endswith()
+>>> s.endswith('lo',1,5)
+True
+>>> s.endswith('ld')
+True
+>>> 
+```
+
+
+----------
+
+``` python,expandtabs()
+>>> s='	hello	'
+>>> s.expandtabs()
+'        hello   '
+>>> s.expandtabs(4)
+'    hello   '
+```
+
+
+----------
+
+``` python,find(),index()
+>>> s='hello'
+>>> s.find('e')
+1
+>>> s.find('l')
+2
+>>> s.find('x')
+-1
+>>> s.index('e')
+1
+>>> s.index('l')
+2
+>>> s.index('x')
+
+Traceback (most recent call last):
+  File "<pyshell#33>", line 1, in <module>
+    s.index('x')
+ValueError: substring not found
+```
+
+
+----------
+
+``` python,isalnum()
+#encoding=utf-8
+import string
+num='1234'
+string0='abcd'
+numStr='123abc'
+strNum='abc123'
+string1='ABCD'
+string2='AbCd'
+string3='aBcD'
+strNum1='Abc123'
+char='@!asd32'
+test=[num,string0,string1,string2,string3,numStr,strNum,strNum1,char]
+for i in test:
+    print i.isalnum()  
+结果：
+True
+True
+True
+True
+True
+True
+True
+True
+False
+```
+
+
 ### 6.7 字符串的独特特性
+#### 6.7.1
+
+  [1]: https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329583176.jpg
+  [2]: ./images/1506331053218.jpg
+  [3]: ./images/1506331340088.jpg
+  [4]: ./images/1506609088747.jpg
+  [5]: ./images/1506609208403.jpg
+  [6]: ./images/1506837623438.jpg
+  [7]: ./images/1506838721724.jpg
