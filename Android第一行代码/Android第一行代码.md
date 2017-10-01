@@ -436,3 +436,136 @@ onResume()|**-**|
 
 ### 3.2 常用控件的使用方法
 #### 3.2.1TextView
+
+``` xml
+    <TextView
+        android:id="@+id/myInput"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:text="this is a input"
+        android:gravity="center"
+    />
+```
+
+
+#### 3.2.2 Button
+1. 系统会默认对button中所有的字母转化为大写
+2. 布局中添加一个按钮
+``` xml
+ <!--textColor设置字体颜色-->
+ <!--textAllCaps设置字符是否全部大写-->
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:text="fds"
+        android:textAllCaps="false"
+        android:textColor="#f10a40"
+         />
+```
+3. 活动中添加按钮响应时间
+
+``` java
+  View button1= findViewById(R.id.button1);
+        if (button1 instanceof Button){
+            Button button=(Button)button1;
+//            使用setOnClickListener()方法为button对象注册一个监听器
+//            按钮点击事件发生时，就会执行监听器中的onClick()方法
+            button.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+                public void onClick(View v) {
+//Toast是Android系统中非常好用的提醒方式，在程序中可以使用它将一些短小的信息通知给用户
+//                  静态方法makeTest()创建了一个Toast对象，其中有三个参数
+//                    1. Context，也就是Toast要求的上下文
+//                      2. Toast显示的文本内容
+//                    3. Toast显示的时长
+//                    调用show()方法将Toast方法显示出来
+                    Toast.makeText(FirstActivity.this,"you have clicked button1",Toast.LENGTH_LONG).show();
+                }
+```
+
+#### 3.2.3 EditText
+1.EditText控件允许用户输入和编辑内容，并可在程序中对这些内容进行处理。
+2.添加EditText控件
+
+``` xml
+   <!--hint预填充，提示用户输入-->
+    <!--maxLines最大行数，当输入内容超过最大行数时，文本会向上滚动而不会拉伸输入框-->
+    <EditText
+        android:id="@+id/myedit"
+        android:layout_width="368dp"
+        android:layout_height="116dp"
+        android:hint="type something here"
+        android:maxLines="1"
+       />
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="center"
+        />
+```
+
+
+3. 设置按钮接受控件输入内容并显示：
+
+``` java
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    EditText editText;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+       Button button=(Button)findViewById(R.id.myButton);
+        editText=(EditText)findViewById(R.id.myedit);
+        button.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch(view.getId()) {
+            case R.id.myButton:
+                String s = editText.getText().toString();
+                Toast.makeText(this, s, Toast.LENGTH_LONG).show();
+                break;
+            default:
+                break;
+        }
+    }
+}
+```
+#### 3.2.4 ImageView
+1. ImageView是用来在用户界面展示图片的一个控件 ，图片通常都是放置在以drawable开头的文件夹下。
+2. 布局中添加一个图片
+
+``` xml
+ <ImageView
+     android:id="@+id/myImage"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:src="@drawable/test"/>
+```
+#### 3.2.5 ProgressBar
+1. 用于在界面上显示一个进度条，表示我们的程序正在加载一些数据。
+2. 布局中添加一个进度条：
+
+``` xml
+<ProgressBar
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     tools:layout_editor_absoluteY="190dp"
+     tools:layout_editor_absoluteX="159dp"
+     android:visibility="visible"/>
+```
+3. 可以使用`android：visibility`属性修改控件的可见性，控件有三种可见性
+
+控件可见状态|描述|设置方法
+--|---|--
+visible|控件可见（默认）|`View.VISIBLE`
+invisible|控件不可见但是它仍然占据着原来的位置和大小|`View.INVISIBLE`
+gone|控件不可见，而且不再占据原来的位置空间|`View.GONE`
+> 使用setVisible()属性可以更改模块的可见性
+
+
