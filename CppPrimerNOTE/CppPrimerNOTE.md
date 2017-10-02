@@ -345,6 +345,63 @@ using std::cin;//使用命名空间中的cin成员
 using namespace std;//使用命名空间std中的所有成员
 ```
 3. 头文件中不应该包含using声明：头文件中的声明会包含到所有引用它的代码中去，这样可能在某个程序中造成命名冲突
+### 3.2 标准库类型string
+1. 标准库类型String表示可变长的字符序列，使用String类型必须首先包括String头文件。作为标准库的一部分，String定义在命名空间std中。
+
+``` c++
+#include<iostream>
+#include<string>
+using std::string;
+using std::cout;
+using std::endl;
+int main(){
+    string s="Hello";
+    cout<<s<<endl;
+    return 0;
+}
+```
+#### 3.2.1 定义和初始化String对象
+1. 初始化String对象的方式：
+
+方式|解释
+--|---|--
+string s1;|默认初始化s1是一个空串
+string s2(s1)|s2是s1的一个副本
+string s2=s1|与上一种方式等价
+string s3("value")|s3是字面值value的副本，除了字面值最后的那个空字符外
+string s3="value"|等价于上一种方式
+stirng s4(n,'c')|把s4初始化为有n个字符c组成的串
+
+2. ==直接初始化==与==拷贝初始化==
+	* 如果使用一个等号初始化一个变量，实际上执行的是拷贝初始化，编译器把等号右侧的初始值拷贝到新创建的对象中去。
+	* 如果不使用等号，则执行的是直接初始化。
+	
+
+	``` c++
+	string s1="hello";//拷贝初始化
+	string s2("hello");//直接初始化
+	string s3(10,'c');//直接初始化，s3的内容是“cccccccccc”
+	string s4=string(10,'c');//拷贝初始化
+	```
+	
+#### 3.2.2 string对象上的操作
+1. String对象上的操作：
+
+操作|解释
+--|--
+os<<s|将s写到输出流os当中，返回os
+is>>s|从is中读入字符串赋值给s，字符串以空白分割，返回is
+getline(is,s)|从is中读取一行赋值给s，返回is
+s.empty()|s为空返回true，否则返回false
+s.size()|返回s中的字符的个数
+s[n]|返回s中第n个字符的引用，位置n从0开始
+s1+s2|返回s1与s2连接之后的结果
+s1=s2|用s2的副本代替s1中原来的字符
+s1==s2|如果s1与s2总说包含的字符完全一样，则他们相等
+s1!=s2|
+<,<=,>,>=|利用字符在字典中的顺序进行比较，大小写敏感
+
+
 
 
 
