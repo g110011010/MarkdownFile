@@ -569,3 +569,46 @@ gone|控件不可见，而且不再占据原来的位置空间|`View.GONE`
 > 使用setVisible()属性可以更改模块的可见性
 
 
+#### 3.2.6 AlertDialog
+1. ==AlertDialog==:可以在当前的界面贪出一个对话框，这个对话框是置顶于所有界面元素之上的，能够屏蔽掉其他元素的交互能力，因此AlertDialog一般都用于提示一些非常重要的内容或者警告信息。
+
+``` java
+   switch(view.getId()) {
+            case R.id.myButton:
+                AlertDialog.Builder alertDialog=new AlertDialog.Builder(MainActivity.this);
+                alertDialog.setTitle("Alert");
+                alertDialog.setMessage("Do you really want to delete it?");
+                alertDialog.setCancelable(true);
+				//设置显示确认按钮，及其响应事件
+                alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+				//设置显示取消按钮，及其响应事件
+                alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                alertDialog.show();
+        }
+```
+
+#### 3.2.7 ProgressDialog
+1. ==ProgressDialog==:和AlertDialog有点相似，都是在界面上弹出一个对话框，都能够屏蔽掉其他控件的交互能力。不同的是ProgressDialog会显示一个进度条。
+
+### 3.3 详解四种基本布局
+1. 布局是一种可用于放置很多控件的容器，它可以按照一定的规律处理内部控件的位置，从而编写出精美的画面
+2. 布局和控件的关系
+
+![enter description here][1]
+#### 3.3.1 线性布局
+1. `LinearLayout`又称作线性布局，这个布局会将它所包含的控件在线性方向上依次排列
+
+  [1]: ./images/1506912859277.jpg
+  
+#### 3.3.2 相对布局
+1. ==RelativeLayout==又称为相对布局。
