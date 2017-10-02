@@ -37,3 +37,13 @@ grammar_cjkRuby: true
 1. `porter` `n.` 门房，搬运工
 2. `not only ...  but ... as well` 不但……而且……与`not only...but also...`是同样的意思
 3. `black and dark` 又黑又暗
+
+## The best art critics
+1. `critic` `n.` 评论家
+2. `pretend` `v.` 假装
+3. `pattern` `n.` 图案
+4. `curtain` `n.` 窗帘、帷幕
+5. `material` `n.` 材料
+6. `appreciate` `v.` 鉴赏
+7. `critically` `v.` 批评地
+8. `upside down` 上下颠倒的
