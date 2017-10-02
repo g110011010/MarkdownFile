@@ -843,7 +843,7 @@ True
 
 ----------
 
-``` python,find(),index()
+``` python,find(),index(),rfind(),rindex()
 >>> s='hello'
 >>> s.find('e')
 1
@@ -929,6 +929,207 @@ False
 ``` python，isdecimal()
 出错
 enter code here
+```
+
+
+----------
+
+``` python，isdigit()
+>>> a='fds'
+>>> a.isdigit()
+False
+>>> c='3243'
+>>> c.isdigit()
+True
+>>> 
+```
+
+
+----------
+
+``` python,islower(),isupper()
+>>> c='3243'
+>>> c.isdigit()
+True
+>>> c.islower()
+False
+>>> a.islower()
+True
+>>> d='Adsf'
+>>> d.islower()
+False
+```
+
+
+----------
+
+``` python,isnumeric()
+出错
+enter code here
+```
+
+
+----------
+
+``` python,isspace()
+>>> s='     '
+>>> s.isspace()
+True
+>>> t='	  		'#包含有空格
+>>> t.isspace()
+True
+```
+
+
+----------
+
+``` python,istitle()
+错误
+enter code here
+```
+
+
+----------
+
+``` python,join()
+>>> a=['fsd','fds']
+>>> string.join(a)
+'fsd fds'
+>>> string.join(a,"*")
+'fsd*fds'
+>>> 
+```
+
+
+----------
+
+``` python,ljust(),rjust()
+>>> a='dfsfs'
+>>> a
+'dfsfs'
+>>> a.ljust(100)
+'dfsfs                                                                                               '
+```
+
+
+----------
+
+``` python,lower(),upper()
+>>> a
+'dfsfs'
+>>> u=a.upper()
+>>> u
+'DFSFS'
+>>> a=u.lower()
+>>> a
+'dfsfs'
+>>> 
+```
+
+
+----------
+
+``` python,lstrip(),rstrip(),strip()
+>>> a
+'dfsfs'
+>>> a='   fsdfd   '
+>>> a
+'   fsdfd   '
+>>> a.lstrip()
+'fsdfd   '
+>>> a.rstrip()
+'   fsdfd'
+>>> a.strip()
+'fsdfd'
+>>> 
+```
+
+
+----------
+
+``` python,partition(),rpartition()
+>>> a='sdafhelfdsafadshelgfdghg'
+>>> a.partition('hel')
+('sdaf', 'hel', 'fdsafadshelgfdghg')
+>>> a.rpartition('hel')
+('sdafhelfdsafads', 'hel', 'gfdghg')
+>>> 
+```
+
+
+----------
+
+``` python,replace()
+>>> a='sdafhelfdsafadshelgfdghg'
+>>> a.replace('hel','WORLD')
+'sdafWORLDfdsafadsWORLDgfdghg'
+>>> a.replace('hel','WORLD',1)
+'sdafWORLDfdsafadshelgfdghg'
+>>> 
+```
+
+
+----------
+
+``` python,split(),splitlines()
+>>> a='fsd\nfsdaf\nfdsa\nfds\nfds'
+>>> a.splitlines()
+['fsd', 'fsdaf', 'fdsa', 'fds', 'fds']
+>>> a.splitlines(3)
+['fsd\n', 'fsdaf\n', 'fdsa\n', 'fds\n', 'fds']
+>>> 
+```
+
+
+----------
+
+``` python,startwith()
+>>> a='fsd\nfsdaf\nfdsa\nfds\nfds'
+>>> a.startswith('hel')
+False
+>>> a.startswith('fsd')
+True
+>>> 
+```
+
+
+----------
+
+``` python,swapcase()
+>>> a='fdsSDfdsSD'
+>>> a.swapcase()
+'FDSsdFDSsd'
+>>> 
+```
+
+
+----------
+
+``` python,title(),istitle()
+>>> a='hello world every day'
+>>> a.title()
+'Hello World Every Day'
+>>> a.title().istitle()
+True
+>>> 
+```
+
+
+----------
+
+``` python,translate()
+错误
+enter code here
+```
+
+
+----------
+
+``` Python，zfill()
+>>> a='hello world every day'
+>>> a.zfill(100)
+'0000000000000000000000000000000000000000000000000000000000000000000000000000000hello world every day'
+>>> 
 ```
 
 
