@@ -401,8 +401,61 @@ s1==s2|如果s1与s2总说包含的字符完全一样，则他们相等
 s1!=s2|
 <,<=,>,>=|利用字符在字典中的顺序进行比较，大小写敏感
 
+2. 获取字符串输入
+
+``` C++
+#include<iostream>
+#include<string>
+using std::string;
+using std::cin;
+using std::cout;
+using std::endl;
+int main(){
+    string s;
+    cin>>s;//读取的字符串不能出现空格
+    cout<<s<<endl;
+    return 0;
+}
+```
 
 
+----------
+
+``` C++
+#include<iostream>
+#include<string>
+using std::string;
+using std::cin;
+using std::cout;
+using std::endl;
+int main(){
+    string s;
+    getline(cin,s);//读取一行
+    cout<<s<<endl;
+    return 0;
+}
+
+enter code here
+```
 
 
+3. 字符串上的函数empty()和size()
 
+``` c++
+#include<iostream>
+#include<string>
+using std::string;
+using std::cin;
+using std::cout;
+using std::endl;
+int main(){
+    string s;
+    getline(cin,s);
+    cout<<s<<endl;
+        cout<<s.empty()<<endl;
+            cout<<s.size()<<endl;
+    return 0;
+}
+
+```
+4. string::size_type()类型：size()函数返回的是一个size_type()类型的值。
