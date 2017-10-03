@@ -1134,7 +1134,66 @@ enter code here
 
 
 ### 6.7 字符串的独特特性
-#### 6.7.1
+#### 6.7.1 特殊字符串和控制字符
+1. ![][8]
+2. ![enter description here][9]
+
+#### 6.7.2 三引号
+1. 三引号允许一个字符串跨越多行，字符串中可以包含换行符、制表符以及其它特殊字符。
+
+``` python
+>>> hi='''fsda
+fdsafsdaf
+fds
+fds'''
+>>> hi
+'fsda\nfdsafsdaf\nfds\nfds'
+>>> 
+```
+
+#### 6.7.3 字符串不变性
+1. 字符串是一个不可变类型，也就是说它的值是不能够被修改或者改变的。
+
+### 6.8 Unicode
+#### 6.8.1 术语
+1. Unicode术语
+
+名词|意思
+--|---|--
+ASCII|美国标准信息交换码
+BMP|基本多文种平面（第零平面）
+BOM|字节顺序标记（标识字节顺序的标识）
+CJK/CJKV|中文-日文-韩文（和越南语）的缩写
+Code point|类似于ASCII值，代表Unicode字符的值，范围为0x000000到0x10FFFF
+Octet|八位二进制数的位组
+UCS|通用字符集
+UCS2|UCS的双字节编码方式
+UCS4|UCS的四字节编码方式
+UTF|Unicode或者UCS的转换格式
+UTF-8|8位UTF转换格式（无符号字节序列，长度为1到4个字节）
+UTF-16|16位UTF转换格式（无符号字节序列，通常是16位长）
+
+#### 6.8.2 什么是Unicode
+1. Unicode可以支持全球很多种语言
+2. 在Unicode之前使用的ASCII，在ASCII中，每个英文字符都是以7位二进制数的方式存储在计算机内的，其范围是32~126（打印字符，0~31是控制字符），后来软件厂商将ASCII码扩展到了8位。
+3. Unicode通过使用一个或者多个字节来表示一个字符，这样Unicode可以表示超过90000个字符。
+4. ![enter description here][10]
+5. ![码表扩展部分][11]
+
+#### 6.8.3 怎样使用Unicode
+1. python里面处理Unicode字符串跟处理ASCII字符串没什么两样。Python把==硬编码==的字符串称为字面上的字符串，默认所有的字面上的字符串都是用ASCII方式编码，可以通过在字符串前面添加一个‘u'前缀来声明Unicode字符串。
+
+``` python
+>>> a='fds'#ASCII字符串
+>>> b=u'fdsgf'#Unicode字符串
+>>> a
+'fds'
+>>> b
+u'fdsgf'
+>>> 
+```
+
+
 
   [1]: https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329583176.jpg
   [2]: ./images/1506331053218.jpg
@@ -1143,3 +1202,7 @@ enter code here
   [5]: ./images/1506609208403.jpg
   [6]: ./images/1506837623438.jpg
   [7]: ./images/1506838721724.jpg
+  [8]: ./images/1507000620573.jpg
+  [9]: ./images/1507000649721.jpg
+  [10]: https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1507002055&di=b56e46a860ecc7f44d0b3e1b3ed77e0e&src=http://s1.knowsky.com/20170221/4fdfzprpy1j41.jpg
+  [11]: ./images/1507002344390.jpg
