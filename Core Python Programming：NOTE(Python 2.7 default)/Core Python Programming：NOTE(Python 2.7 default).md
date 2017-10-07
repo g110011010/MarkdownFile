@@ -1195,6 +1195,75 @@ u'fdsgf'
 #### 6.8.4 Codec是什么
 1. codec是COder/DECoder的首字母组合。它定义了文本跟二进制值的转换方式，跟ASCII那种用一个字节把字符转换成数字的方式不同，Unicode使用的是多字节。这导致了Unicode支持多种不同的编码方式。比如：ASCII，UTF-8，UTF-16
 
+#### 6.8.5 编码解码
+1. 当你把一个字符串写入到文件中的时候，就必须指定一个编码用于把对应的Unicode内容转换为你定义的格式。Python中使用encode（）函数解决此问题。相应的，当我们从文件中读取字符串的时候，我们必须使用decode（）函数指定解码格式
+
+#### 6.8.6 把Unicode应用到实际当中
+1. 使用Unicode时应遵守的使用规则，以避免其引起的诸多bug.
+
+	* 程序中出现字符串时一定要加一个前缀‘u'
+	* 不要用str()函数，用Unicode（）函数取代
+	* 不要用过时的String模块——如果传给它的是非ASCII字符，它会搞砸一切
+	* 不到必要时不要在你的程序里面编解码Unicode字符，只有当要写入文件或数据库或者网络的时候，才调用encode（）函数；相应的，只有当你需要把数据读回来的时候才调用decode（）函数。
+
+2. Python默认使用ASCII处理字符串
+
+
+### 6.11 列表
+
+
+``` python
+>>> #创建列表并赋值
+>>> aList=[1,2,3,'123']
+>>> aList
+[1, 2, 3, '123']
+>>> anotherList=[None,'this is another']
+>>> anotherList
+[None, 'this is another']
+>>> List1=list('this is a list')
+>>> List1
+['t', 'h', 'i', 's', ' ', 'i', 's', ' ', 'a', ' ', 'l', 'i', 's', 't']
+>>> List2=[]
+>>> List2
+[]
+>>> #访问列表中的值
+>>> aList[0]
+1
+>>> aList[1,3]
+
+Traceback (most recent call last):
+  File "<pyshell#12>", line 1, in <module>
+    aList[1,3]
+TypeError: list indices must be integers, not tuple
+>>> aList[1:3]
+[2, 3]
+>>> aList[2:4]#切片操作
+[3, '123']
+>>> #更新列表（向列表中添加一个对象）
+>>> anotherList.append(123)
+>>> anotherList
+[None, 'this is another', 123]
+>>> aList
+[1, 2, 3, '123']
+>>> alist[2]='hello'
+
+Traceback (most recent call last):
+  File "<pyshell#19>", line 1, in <module>
+    alist[2]='hello'
+NameError: name 'alist' is not defined
+>>> aList[2]='Hello'
+>>> aList
+[1, 2, 'Hello', '123']
+>>> #删除列表中的元素
+>>> del aList[1]
+>>> aList
+[1, 'Hello', '123']
+>>> aList.remove('123')
+>>> aList
+[1, 'Hello']
+>>> del aList
+>>> #删除列表本身
+```
 
 
   [1]: https://www.github.com/g110011010/MarkdownFile/raw/master/Image/1506329583176.jpg
