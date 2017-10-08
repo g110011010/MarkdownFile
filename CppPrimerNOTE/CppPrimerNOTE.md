@@ -459,3 +459,35 @@ int main(){
 
 ```
 4. string::size_type()类型：size()函数返回的是一个size_type()类型的值。
+#### 3.2.3 处理String对象中的字符
+1. ![enter description here][1]
+
+
+  [1]: ./images/1507463409599.jpg
+ 
+2. 使用基于范围的for语句处理每一个字符
+
+``` c++
+#include<iostream>
+#include<string>
+using std::string;
+using std::cin;
+using std::cout;
+using std::endl;
+int main(){
+    string s="123456";
+    for(auto a : s){
+        cout<<a+4<<endl;}
+    int a[2];
+    a[1]=23;
+    a[0]=12;
+    for(auto c : a){
+        cout<<c<<endl;
+    }
+    return 0;
+}
+enter code here
+```
+>使用范围for可以依次处理序列类型对象中的每一个元素
+
+### 3.3 标准库类型vector
