@@ -1277,3 +1277,122 @@ NameError: name 'alist' is not defined
   [9]: ./images/1507000649721.jpg
   [10]: https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1507002055&di=b56e46a860ecc7f44d0b3e1b3ed77e0e&src=http://s1.knowsky.com/20170221/4fdfzprpy1j41.jpg
   [11]: ./images/1507002344390.jpg
+  
+  
+## 第七章 映像和集合类型
+### 7.1 映像类型：字典
+1. 字典是Python语言中唯一的映射类型。映射对象里哈希值（键，key）和指向的对象（值，value）是一对多的关系。
+2. 一个字典类型是可变的，它是一个容器类型，能够容纳任意个数的Python对象，其中也包括其他容器类型。
+3. 字典类型和序列类型容器类的区别是存储和访问数据的方式不同。序列类型只能使用数值类型的键。映射类型可以使用其他对象类型做键，一般最常见的是使用字符串做键。
+#### 7.1.1 创建字典并给字典赋值
+
+``` python
+>>> #创建字典
+>>> a={}
+>>> b={'hello':'world',a:'a dic'}
+
+Traceback (most recent call last):
+  File "<pyshell#4>", line 1, in <module>
+    b={'hello':'world',a:'a dic'}
+TypeError: unhashable type: 'dict'
+>>> b={'hello':'world','num':123}
+>>> a
+{}
+>>> b
+{'num': 123, 'hello': 'world'}
+>>> a,b
+({}, {'num': 123, 'hello': 'world'})
+>>> #使用工厂方法dict()来创建字典
+>>> c=dict((['x',1],['y',2]))
+>>> c
+{'y': 2, 'x': 1}
+>>> #使用内建方法fromkeys()来创建一个默认的字典，字典中的元素具有相同的值（如果没有给出，默认为none）
+>>> d={}.fromkeys(('x','y','z'),123)
+>>> d
+{'y': 123, 'x': 123, 'z': 123}
+>>> e={}.fromkeys(('m','n'))
+>>> e
+{'m': None, 'n': None}
+>>> 
+enter code here
+```
+>* 不能使用字典对象作为key
+>* 可以使用dict()和fromkeys()方法来创建字典
+
+#### 7.1.2 访问字典中的值
+1. 循环访问字典中的所有的值
+``` python
+>>> b
+{'num': 123, 'hello': 'world'}
+>>> for keys in b:
+	print 'key=%s,value=%s' % (keys,b[keys])
+
+	
+key=num,value=123
+key=hello,value=world
+>>> for key in b.keys():
+	print 'key=%s,value=%s' % (keys,b[keys])
+
+	
+key=hello,value=world
+key=hello,value=world
+>>> 
+enter code here
+```
+2. 根据键获取某个确定的值
+
+``` python
+>>> b['num']
+123
+>>> b['nu']
+
+Traceback (most recent call last):
+  File "<pyshell#26>", line 1, in <module>
+    b['nu']
+KeyError: 'nu'
+>>> 
+```
+3. 确定字典中是否存在某个键
+
+``` python
+>>> 'num' in b
+True
+>>> 'n' not in b
+True
+>>> b.has_key('num')
+True
+>>> 
+```
+#### 7.1.3 更新和添加字典元素
+
+``` python
+>>> b
+{'num': 123, 'hello': 'world'}
+>>> b['num']='hello'#更新
+>>> b
+{'num': 'hello', 'hello': 'world'}
+>>> b['n']='append'#添加
+>>> b
+{'num': 'hello', 'hello': 'world', 'n': 'append'}
+>>> 
+```
+#### 7.1.4 删除字典元素和字典
+
+``` python
+>>> b
+{'num': 'hello', 'hello': 'world', 'n': 'append'}
+>>> del b['num']
+>>> b
+{'hello': 'world', 'n': 'append'}
+>>> del b
+>>> b
+
+Traceback (most recent call last):
+  File "<pyshell#38>", line 1, in <module>
+    b
+NameError: name 'b' is not defined
+>>> 
+```
+
+
+
