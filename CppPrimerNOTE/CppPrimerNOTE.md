@@ -277,7 +277,7 @@ const auto f=ci;
 1. 如果decltype使用的表达式不是一个变量，则decltype返回表达式结果对应的类型
 
 ``` c++
- int a=5;
+ int a=5;m
     double b=6;
     decltype(a+5) c;//c的类型为int
 ```
