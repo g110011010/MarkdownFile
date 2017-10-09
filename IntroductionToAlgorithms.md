@@ -53,6 +53,24 @@ int main(){
     return 0;
 }
 ```
+2. python
+
+``` python
+num=[12,32,12,43,54,324,543,7,9,4,2,6]
+for i,j in enumerate(num):
+    if i==0:
+        continue
+    else:
+        tem=j
+        k=i
+        while num[k-1]>tem and k>0:
+            num[k]=num[k-1]
+            k-=1
+        num[k]=tem
+
+print num
+```
+
 
 
 ### 2.2 分析算法
