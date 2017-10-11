@@ -36,7 +36,9 @@ grammar_cjkRuby: true
 1. XML是用来描述数据的
 2. XML是一个像HTML语言一样的标签化语言
 3. 你可以在XML中定义自己的标签
-4. XML使用DTD(Document Type Definition)或者XML schema来描述数据
+4. XML使用DTD(Document Type Definition)或者XML schema(XSD)来描述数据
+5. DTD最大的优点是简练,缺点是它自己有自己独特的语法
+6. XSD是DTD的替代品.XSD的优点:可以根据将来的条件扩展数据模型;比DTD丰富和有用;本身使用XML书写,没有专门的语法;支持一系列数据类型(今int,float,boolean,date);支持命名空间;支持属性组.缺点:文档篇幅较大,有效载荷低..XSD的后缀名是.xsd
 5. 带有DTD或者XML schema的XML是能够进行自我描述的
 6. XML是由W3C公司设计的
 7. 具有可扩展性
