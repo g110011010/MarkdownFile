@@ -1403,8 +1403,43 @@ NameError: name 'b' is not defined
 1. **字典的键查找操作符**:`[]`
 2. (键)成员关系操作（in,not in）
 ### 7.3 映射类型的内建函数和工厂函数
-#### 7.3.1
-#### 7.3.2
+#### 7.3.1 标准类型函数[type()、str()\cmp()]
+1. cmp() 方法比较字典的方式：首先比较字典的大小，然后是键，然后是值
+#### 7.3.2 映射类型相关的函数
+1. dict():工厂函数被用来创建字典。如果不提供参数，会创建空字典
+
+``` python
+>>> x=dict()
+>>> x
+{}
+>>> type(x)
+<type 'dict'>
+>>> x=dict([('xy'[i-1],i) for i in range(2,4)])
+
+Traceback (most recent call last):
+  File "<pyshell#3>", line 1, in <module>
+    x=dict([('xy'[i-1],i) for i in range(2,4)])
+IndexError: string index out of range
+>>> y=dict([('xy'[i-1],i) for i in range(1,3)])
+>>> y
+{'y': 2, 'x': 1}
+>>> z=dict(a=2,b=3)
+>>> z
+{'a': 2, 'b': 3}
+>>> m=dict(z)
+>>> m
+{'a': 2, 'b': 3}
+>>> n=dict(**z)
+>>> n
+{'a': 2, 'b': 3}
+>>> f=z.copy()
+>>> f
+{'a': 2, 'b': 3}
+>>> #z.copy()方法比dict(z)的效率更高
+>>> 
+```
+2. hash():内建函数hash本来不是为字典设计的方法，但是它可以判断某个方法是否适合用来做一个字典的键。只有一个对象是可哈希的，才可以作为字典的键（函数的返回值是整形，不产生错误或异常）
+
 
 ### 7.4 映射类型内建方法
 ### 7.5 字典的键
