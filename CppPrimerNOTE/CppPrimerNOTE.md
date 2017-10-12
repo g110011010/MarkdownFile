@@ -277,7 +277,7 @@ const auto f=ci;
 1. 如果decltype使用的表达式不是一个变量，则decltype返回表达式结果对应的类型
 
 ``` c++
- int a=5;m
+ int a=5;
     double b=6;
     decltype(a+5) c;//c的类型为int
 ```
@@ -495,6 +495,28 @@ enter code here
 #### 3.3.1 定义和初始化vector对象
 1. ![enter description here][2]
 #### 3.3.2 向vector对象中添加元素
+1.可以利用vector的成员函数**push_back()**,向一个vector中添加元素
+
+``` c++
+#include<iostream>
+#include<string>
+#include<vector>
+using std::cin;
+using std::cout;
+using std::endl;
+using std::vector;
+int main(){
+    vector<int> v;
+    for(int i=0;i<100;i++){
+            v.push_back(i);
+        cout<<v[i]<<endl;
+    }
+    return 0;
+}
+
+```
+
+
 #### 3.3.3 其他vector操作
 ### 3.4 迭代器介绍
 #### 3.4.1 使用迭代器
