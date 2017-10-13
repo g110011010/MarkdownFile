@@ -1451,7 +1451,10 @@ dict.get(key,default=None)|对字典中的键key，返回它的对应的值value
 dict.has_key(key)|如果键在字典中存在，返回true，否则返回false。现在已经被in和not  in 替代
 dict.items()|返回一个列表中键值对元组的列表
 dict.iter*()|方法iteritems(),iterkeys(),itervalues(),与他们的对应的非迭代方法一样，不同的是他们返回一个迭代子，而不是一个列表
-dict.pop(key[,default])
+dict.pop(key[,default])|和方法get() 相似，如果字典中key键存在，删除并返回dict[key]:如果key键不存在。返回default，没定义default时报错
+dict.setdefault()|和方法set()相似，如果字典中不存在key键，由dict[key]=default为它赋值
+dict.update(dict2)|将字典dict2中的值添加到字典dict中
+dict.values()|返回一个包含字符中所有值的列表
 
 
 
