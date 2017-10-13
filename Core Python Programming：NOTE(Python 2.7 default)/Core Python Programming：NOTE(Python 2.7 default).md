@@ -1442,6 +1442,12 @@ IndexError: string index out of range
 
 
 ### 7.4 映射类型内建方法
+方法名称|操作
+--|---|--
+dict.clear()|删除字典中的所有元素
+dict clear()|返回字典（浅复制）的一个副本（不知道怎么用）
+dict.fromkeys()|
+
 ### 7.5 字典的键
 ### 7.6 集合类型
 ### 7.7 集合类型操作符
