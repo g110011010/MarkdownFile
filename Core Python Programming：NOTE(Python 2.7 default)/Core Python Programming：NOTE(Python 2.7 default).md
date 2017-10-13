@@ -1446,7 +1446,89 @@ IndexError: string index out of range
 --|---|--
 dict.clear()|删除字典中的所有元素
 dict clear()|返回字典（浅复制）的一个副本（不知道怎么用）
-dict.fromkeys()|
+dict.fromkeys()|创建并返回一个新字典，以seq作为该字典的键，val作为该字典中所有键对应的初始值，如果没有提供初始值，则默认为none
+dict.get(key,default=None)|对字典中的键key，返回它的对应的值value，如果字典中不存在此键，则返回default值，默认为None
+dict.has_key(key)|如果键在字典中存在，返回true，否则返回false。现在已经被in和not  in 替代
+dict.items()|返回一个列表中键值对元组的列表
+dict.iter*()|方法iteritems(),iterkeys(),itervalues(),与他们的对应的非迭代方法一样，不同的是他们返回一个迭代子，而不是一个列表
+dict.pop(key[,default])
+
+
+
+``` python,get()
+>>> a
+{1: [4, 5, 6], 2: [4, 5, 6], 3: [4, 5, 6]}
+>>> a.get(1)
+[4, 5, 6]
+>>> a.get(5)
+>>> a.get(6,"no this key")
+'no this key'
+>>> 
+enter code here
+```
+
+
+----------
+
+``` python,has_key(),items()
+>>> a.has_key(12)
+False
+>>> 12 in a
+False
+>>> a.items
+<built-in method items of dict object at 0x0000000003EF1E18>
+>>> b=a.items()
+>>> b
+[(1, [4, 5, 6]), (2, [4, 5, 6]), (3, [4, 5, 6])]
+>>> type(b)
+<type 'list'>
+>>> 
+```
+
+
+----------
+
+``` python,iter*()
+>>> b=a.itervalues()
+>>> b
+<dictionary-valueiterator object at 0x0000000003FC15E8>
+>>> type(b)
+<type 'dictionary-valueiterator'>
+>>> c=a.iterkeys()
+>>> c
+<dictionary-keyiterator object at 0x0000000003FC1638>
+>>> type(c)
+<type 'dictionary-keyiterator'>
+>>> d=a.iteritems()
+>>> d
+<dictionary-itemiterator object at 0x0000000003FC1688>
+>>> type(d)
+<type 'dictionary-itemiterator'>
+>>> 
+```
+
+
+----------
+
+``` python
+>>> d=a.pop(1)
+>>> d
+[4, 5, 6]
+>>> a
+{2: [4, 5, 6], 3: [4, 5, 6]}
+>>> d=a.pop(4)
+
+Traceback (most recent call last):
+  File "<pyshell#57>", line 1, in <module>
+    d=a.pop(4)
+KeyError: 4
+>>> d=a.pop(5,'no thiskey')
+>>> d
+'no thiskey'
+>>> 
+enter code here
+```
+
 
 ### 7.5 字典的键
 ### 7.6 集合类型
