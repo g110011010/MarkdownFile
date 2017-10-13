@@ -42,10 +42,9 @@ grammar_cjkRuby: true
 5. 带有DTD或者XML schema的XML是能够进行自我描述的
 6. XML是由W3C公司设计的
 7. 具有可扩展性
-
 	* 可以被用于文本或者消息
 	* 不像HTML,可以定义新的标签
-8. 是国家化的:基于Unicode编码
+8. 是国际化的:基于Unicode编码(缺省编码格式为UTF-8)
 
 > **关于Unicode**
 > 1. 中文编码:GB2312(GB 国标)
@@ -53,8 +52,100 @@ grammar_cjkRuby: true
 > 3. 日本编码:shift-gis
 > 4. ISO8859:ASCII:0~127,扩展后增加了128~255
 > 5. .......
-> 为了解决各国自行编码的乱像,国际协议上制定了UCS2(Unicode Character Set 2^6)后来又制定了UCS4
+> 为了解决各国自行编码的乱像,国际协议上制定了UCS2(Unicode Character Set 2^16)后来又制定了UCS4(字符集2^32)
 > 6. CJK(Chinese Japanese Karen)编码
 > 7. 英文占世界信息保有量的百分之九十
-> 8. UTF-8( Unicode transform )目的是解决用最小的内存完成所有编码,对不同类型的语言编码使用不同的编码格式进行编码,一次增加8位,比如英文使用8位就够,而中文是不够的,utf-8就增加一个8位来完成这个语言的所有编码,不够的话就再增加8位,以此类推
+> 8. UTF-8( Unicode transform )目的是解决用最小的内存完成所有编码,对不同类型的语言编码使用不同的编码格式进行编码,一次增加8位,比如英文使用8位就够,.而中文是不够的,utf-8就增加一个8位来完成这个语言的所有编码,不够的话就再增加8位,以此类推
 > 9. UTF-16:工作原理与UTF-
+> 10. 
+
+## What's Not XML?
+1. XML不是一种编程语言
+2. XML不是一种网络传输协议
+3. XML不是一个数据库
+4. XML是用于定义和描述数据结构的语法.我们所全部感兴趣的是数据的机构和如何使用它
+## XML与HTML之间的不同
+1. XML不是HTML的取代,而是对HTML的补充
+2. XML与HTML的设计目的不同:XML主要用于对数据\信息进行描述,而HTML则致力于对信息的展示
+3. XML和HTML的使用标准不同:HTML的语法的严格程度远低于XML.
+	
+	* XML:必须适当嵌套并均衡
+		* eg:`<br/>` OK 
+		* eg:`<b>bold<i>and italic </i>text</b>` OK
+
+	* HTML:
+		* eg:`<b>bold<i>and italic</b>text</i>` BAD IN XML
+	*XML:
+		*eg:`<img src='images/test.jpg'/>`
+	*HTML:
+		*eg:`<img src=images/test.jps/>`
+	*XML是大小写敏感的	
+		
+4. XML的解析器是parser,
+
+# Course 2 XML语法
+
+``` xml
+<?xml version="1.0" encoding="IOS-8895" standalone="yes" ?><!--1.0版本是针对与阿拉伯语指定的,GB-2312国标简体中文编码,encoding缺省的时候是默认编码UTF-8.standalone表示这个文件是否能够独立存在-->
+<note><!--根元素,XML只有一个根元素-->
+    <to>Tove</to>
+    <from>Jani</from>
+    <heading>reminder</heading>
+    <body>test</body>
+</note>
+```
+### 根元素
+1. 所有的XML文件都必须有而且只有一个根元素
+
+### XML中所有的属性都必须被引号引住
+### 在XML中,回车(RF)和换行(LF)统一被转换成换行来理解
+1. 在Windows下,换行时系统会自动添加换行符和回车符
+2. 在Unix下,只会添加换行符
+3. 在Macintosh下,只会添加一个回车符
+### XML元素是可扩展的
+### 处理指令
+### Illegal PCDATA Characters
+1. CDATA:字符型数据,不一定要经过解析器解析
+2. PCDATA:(代表要经过解析器解析的字符数据) 
+3. 有些字符不能够直接放入到XML文档中,eg:`<`和`&`
+
+
+字符|转义字符
+--|---|--
+&amd|&
+&lt|<
+&bt|>
+
+### CADAT Character
+
+``` xml
+<example>
+	<![CADATA[这个位置的除去"]"之外的所有字符都不会被解析器解析]]>
+</example>
+enter code here
+```
+### XML 命名空间
+1. XML命名空间保证了命名冲突的避免 ,
+
+### XML命名空间是如何工作的 
+### URIs,URLs & URNs
+1. URIs:是一种标示资源的字符串,可以有两种表达方式:URL和URN
+2. URLs:http://www.baidu.com
+3. URNs:eg:urn:foo:a,123,456
+
+4. URIs仅仅是用于给命名空间一个名字,但是其本身并不具有任何含义.
+
+### XML命名协定
+1. XML中最重要的命名为元素名字,属性名字和实体名字
+2. 名字里面可以包含字母,数字,杠(-),句号(.).
+3. 命名不能以XML的任意形式开始(XML123,Xmlasj均不合法
+
+## Course 3 XML DTD
+1. DTD的目的:定义一个合法的XML文档块 
+2. why use dtd?
+
+
+
+### DTD 
+1. DTD:是一套指导XML数据文档生成的规则
+2. 
