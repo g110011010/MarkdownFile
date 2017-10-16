@@ -44,4 +44,75 @@ grammar_cjkRuby: true
 3. 一个算法中所有语句的频度之和构成了该算法的运行时间。
 4. 渐进时间复杂度：以基本语句（执行次数最多的一条语句）的频度作为复杂度衡量标准
 5. 插入排序 快速排序，时间复杂度
-6. 大O符号 常数级（O(1)）eg:查找一个数组中的第一项 ; 对数级（（O（log n））） 线性级 多项式级 （以上为多项式时间复杂度的算法 以下为指数时间的算法） 指数集 阶乘级  
+6. <p>常用的排序算法的时间复杂度和空间复杂度</p>
+<div class="xspace-itemmessage">
+<p>
+<table style="width: 587px; height: 1px;" border="1">
+<tbody>
+<tr>
+<td width="587" height="37" valign="middle">
+<p align="center"><span>排序法 </span></p>
+</td>
+<td width="587" height="37"><span>最差时间分析</span></td>
+<td width="587" height="37"><span>平均时间复杂度 </span></td>
+<td width="587" height="37"><span style="color: #555555;">稳定度 </span></td>
+<td width="587" height="37"><span style="color: #555555;">空间复杂度 </span></td>
+</tr>
+<tr>
+<td width="587" height="42" align="center"><span>冒泡排序</span></td>
+<td width="587" height="42" align="center"><span>O(n<sup>2</sup>)</span></td>
+<td width="587" height="42" align="center"><span style="color: #555555;">O(n<sup>2</sup>) </span></td>
+<td width="587" height="42" align="center"><span style="color: #555555;">稳定 </span></td>
+<td width="587" height="42" align="center"><span style="color: #555555;">O(1) </span></td>
+</tr>
+<tr>
+<td width="587" height="39" align="center"><span>快速排序</span></td>
+<td width="587" height="39" align="center"><span>O(n<sup>2</sup>)</span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">O(n*log<sub>2</sub>n) </span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">不稳定 </span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">O(log<sub>2</sub>n)~O(n) </span></td>
+</tr>
+<tr>
+<td width="587" height="39" align="center"><span>选择排序</span></td>
+<td width="587" height="39" align="center"><span>O(n<sup>2</sup>)</span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">O(n<sup>2</sup>) </span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">稳定 </span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">O(1) </span></td>
+</tr>
+<tr>
+<td width="587" height="39" align="center"><span>二叉树排序</span></td>
+<td width="587" height="39" align="center"><span>O(n<sup>2</sup>)</span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">O(n*log<sub>2</sub>n) </span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">不一顶 </span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">O(n) </span></td>
+</tr>
+<tr>
+<td width="587" height="39" align="center">
+<p align="center"><span>插入排序 </span></p>
+</td>
+<td width="587" height="39" align="center"><span>O(n<sup>2</sup>)</span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">O(n<sup>2</sup>) </span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">稳定 </span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">O(1) </span></td>
+</tr>
+<tr>
+<td width="587" height="39" align="center"><span>堆排序</span></td>
+<td width="587" height="39" align="center"><span>O(n*log<sub>2</sub>n) </span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">O(n*log<sub>2</sub>n) </span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">不稳定 </span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">O(1) </span></td>
+</tr>
+<tr>
+<td width="587" height="39" align="center"><span>希尔排序</span></td>
+<td width="587" height="39" align="center"><span>O</span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">O </span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">不稳定 </span></td>
+<td width="587" height="39" align="center"><span style="color: #555555;">O(1)</span></td>
+</tr>
+</tbody>
+</table>
+</p>
+6. 大O符号 常数级（O(1)）eg:查找一个数组中的第一项 ; 对数级（（O（log n））） 线性级 多项式级 （以上为多项式时间复杂度的算法 以下为指数时间的算法） 指数集 阶乘级
+7. 大Ω符号：确定算法复杂度的下线
+8.  非递归算法分析：首先找到基本语句
+9.  算法的后验分析
