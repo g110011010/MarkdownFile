@@ -267,6 +267,13 @@ enter code here
 
 
 ### 7.5 字典的键
+1. 不允许一个键对应多个值
+2. 键必须是可哈希的
+3. hashable(可哈希性)：An object is hashable if it has a hash value which never changes during its lifetime (it needs a __hash__() method), and can be compared to other objects (it needs an __eq__() or __cmp__() method). Hashable objects which compare equal must have the same hash value.
+
+    (如果一个对象是可哈希的,那么在它的生存期内必须不可变(需要一个哈希函数),而且可以和其他对象比较(需要比较方法).比较值相同的对象一定有相同的哈希值)
+
+翻译的比较生硬...简单的说就是生存期内可变的对象不可以哈希,就是说改变时候其id()是不变的.基本就是说列表,字典,集合了.
 ### 7.6 集合类型
 ### 7.7 集合类型操作符
 ### 7.8 内建函数
