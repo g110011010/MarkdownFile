@@ -81,3 +81,45 @@ tel:
 7. XML中的注释：与HTML的注释类似。
 8. 在XML中空格会被保留，HTML会把多个连续的空格字符裁剪成一个，而XML文档中的空格不会被删节。
 9. XML以LF存储换行：在 Windows 应用程序中，换行通常以一对字符来存储：回车符 (CR) 和换行符 (LF)。这对字符与打字机设置新行的动作有相似之处。在 Unix 应用程序中，新行以 LF 字符存储。而 Macintosh 应用程序使用 CR 来存储新行。
+
+## XML元素
+1. ==XML元素==是指从（且包含）开始标签直到（且包含）结束标签的部分
+2. 元素可以包含其他元素、文本或两者的混合物。元素也可以拥有属性。
+3. XML命名规则：
+	* 名称可以含字母数字以及其他的字符
+	* 名称不能以数字或者标点符号开始
+	* 名称不能以字符（“xml”）及其任何大小写组合形式开始
+	* 名称不能包含空格
+
+4. XML元素是可扩展的，XML可以在不中断应用程序的情况下进行扩展。也就是除应用程序要求的元素之外，XML文档还可以包含其他元素。
+
+## XML属性
+1. XML可以在开始标签中包含属性，类似HTML。属性提供关于元素的额外信息。
+2. XML属性值必须被引号包围，不过单引号与双引号均可使用。
+3. 如果属性值本身包含双引号，那么有必要使用单引号包围它。或者使用实体引用。
+
+``` xml
+<gangster name='George "Shotgun" Ziegler'>
+<gangster name="George &quot;Shotgun&quot; Ziegler">
+```
+
+4. XML 元素 vs. 属性：在XML中，应该尽量避免使用属性。如果信息感觉起来像数据，那么久使用子元素。
+5. 针对元数据的XML属性：有时候会向元素分配ID引用。这些ID索引可以用于标识XML元素，它起到的作用和HTML中的ID属性是一样的。
+
+## XML验证
+1. 拥有正确语法的XML被称为“形式良好”的XML（遵循XML的语法规则）
+2. 通过DTD验证的XML是“合法”的XML
+
+``` xml
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE note SYSTEM "Note.dtd"><!--DOCTYPE 声明是对外部DTD文件的引用。-->
+<note>
+<to>George</to>
+<from>John</from>
+<heading>Reminder</heading>
+<body>Don't forget the meeting!</body>
+</note>  
+enter code here
+```
+
+
