@@ -55,3 +55,50 @@ tel:
 ## DTD-元素
 1. 在一个DTD中，元素通过元素声明来进行声明。
 2. 声明一个元素：
+
+``` xml
+<!ELEMENT 元素名称 类别>
+<!ELEMENT 元素名称 (元素内容)>
+```
+3. 元素及标示
+
+元素|描述|声明关键字|形式
+--|---|---|--
+空元素|空元素通过类别关键词EMPTY进行声明|EMPTY|`<!ELEMENT 元素名称 EMPTY>`
+只有PCDATA的元素|通过圆括号中的#PCDATA进行声明|(#PCDATA)|`<!ELEMENT 元素名称 (#PCDATA)`
+带有任何内容的元素|通过类别关键词ANY声明|ANY|`<!ELEMENT 元素名称 ANY>`
+带有子元素(序列)的元素|带有一个或多个子元素的元素通过圆括号中的子元素名进行声明|(子元素1,子元素2...),当子元素按照由逗号分开的序列进行声明时,这些子元素必须按照相同的顺序出现在文档中|`<!ELEMENT 元素名称 (子元素名称1,子元素名称2,...)>`
+4. 声明出现限定次数的元素
+
+``` xml
+<!--出现一次-->
+<!ELEMENT note (message)>
+<!--至少出现一次-->
+<!ELEMENT note (message+)>
+
+<!--出现零次或多次-->
+<!ELEMENT note (message*)>
+
+<!--出现一次或零次-->
+<!ELEMENT note (message?)>
+<!--note元素必须包含to from header子元素,包含message和body元素中的一个-->
+<!ELEMENT note (to,from,header,(message|body))>
+<!--声明混合型内容:"note" 元素可包含出现零次或多次的 PCDATA、"to"、"from"、"header" 或者 "message"。-->
+
+
+<!ELEMENT note (#PCDATA|to|from|header|message)*>
+
+``` xml
+<!ELEMENT br EMPTY>
+```
+XML例子:
+
+``` xml
+<br/>
+```
+
+
+## DTD-属性
+1. 在DTD中,属性通过ATTLIST声明来进行声明 
+2. 声明属性使用下列语法:`<!ATTLIST 元素名称 属性名称 属性类型 默认值>`
+
