@@ -149,3 +149,6 @@ enter code here
 ### DTD 
 1. DTD:是一套指导XML数据文档生成的规则
 2. 
+## Course 4 XSD
+1. XML具有面向对象的特点
+2. 
