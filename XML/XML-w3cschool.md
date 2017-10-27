@@ -121,5 +121,74 @@ tel:
 </note>  
 enter code here
 ```
+## XML命名空间
+1. XML命名空间提供了避免元素命名冲突的方法。
+2. 在XML中，元素名称有开发者定义，当两个不同的文档使用相同的元素名的时候，就会发生命名冲突
+
+``` xml
+<table>
+   <tr>
+   <td>Apples</td>
+   <td>Bananas</td>
+   </tr>
+</table>
+与下面的一起使用的时候就会发生命名冲突
+<table>
+   <name>African Coffee Table</name>
+   <width>80</width>
+   <length>120</length>
+</table>
+```
+
+
+3. 使用前缀来避免命名冲突
+
+``` xml
+<h:table>
+   <h:tr>
+   <h:td>Apples</h:td>
+   <h:td>Bananas</h:td>
+   </h:tr>
+</h:table>
+与
+<f:table>
+   <f:name>African Coffee Table</f:name>
+   <f:width>80</f:width>
+   <f:length>120</f:length>
+</f:table>
+```
+
+4. XML命名空间属性：XML的命名空间属性被放置于元素的开始标签之中，并使用以下的语法：`xmlns:namespace-prefix="namespaceURI"`
+	* 当命名空间被定义在元素的开始标签中的时候，所有带有相同前缀的子元素都会与同一命名空间相关联
+	* 用于标示命名空间的地址不会被解析器用于查找信息。其唯一的作用是赋予命名空间一个唯一的名称。不过，很多公司常常会作为指针来使用命名空间指向实际存在的网页，这个网页包含关于命名空间的信息。
+
+	
+
+``` xml
+<f:table xmlns:f="http://www.w3school.com.cn/furniture">
+   <f:name>African Coffee Table</f:name>
+   <f:width>80</f:width>
+   <f:length>120</f:length>
+</f:table>
+enter cod<f:table xmlns:f="http://www.w3school.com.cn/furniture">
+   <f:name>African Coffee Table</f:name>
+   <f:width>80</f:width>
+   <f:length>120</f:length>
+</f:table>e here
+```
+
+
+5. ==统一资源标识符（Uniform Resource Identifier,URI）==:统一资源标识符是一串可以标识因特网资源的字符。最常见的URI是用来标示因特网域名地址的==统一资源定位器（URL）==。另一个不那么常用的URI是==统一资源命名（URN）==
+6. **默认的命名空间**：为元素定义默认的命名空间可以让我们省去在所有子元素中使用前缀的工作。
+
+``` xml
+<table xmlns="http://www.w3.org/TR/html4/">
+   <tr>
+   <td>Apples</td>
+   <td>Bananas</td>
+   </tr>
+</table>
+enter code here
+```
 
 
