@@ -11,6 +11,15 @@ tel:
 
 欢迎使用 **{小书匠}(xiaoshujiang)编辑器**，您可以通过==设置==里的修改模板来改变新建文章的内容。
 ## XSD 简介
+1. **XML的作用**：
+	* 定义可出现在文档中的子元素
+	* 定义可出现在文档中的属性
+	* 定义那些元素是子元素
+	* 定义子元素的次序
+	* 定义子元素的数目
+	* 定义元素是否为空，或者是否可包含文本
+	* 定义元素和属性的数据类型
+	* 定义元素和属性的默认值以及固定值
 1. XSD相对于DTD的优势：
 	* 可以针对未来的需求进行扩展
 	* XSD更完善，功能更强大
@@ -27,10 +36,85 @@ tel:
 	* 可以更容易的定义数据约束
 	* 可以更容易的定义数据模型
 	* 可以更容易的在不同数据类型之间转换数据
-
-2. XML可以保护数据通讯
+1. XSD使用XML语法
+2. XML可以保护数据通讯：通过XSD，发送方可以用一种接收方能够明白的方式来描述数据。
 
 ## 如何使用XSD
+1. 一个简单的XML文档：
+
+``` xml
+<?xml version="1.0"?>
+<note>
+<to>George</to>
+<from>John</from>
+<heading>Reminder</heading>
+<body>Don't forget the meeting!</body>
+</note>
+```
+2. 使用DTD对上面的文档进行定义：
+	
+
+``` dtd
+<!ELEMENT note (to, from, heading, body)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+```
+3. 使用XSD对XML进行定义：
+
+``` xml
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.w3school.com.cn"
+xmlns="http://www.w3school.com.cn"
+elementFormDefault="qualified">
+
+<xs:element name="note">
+    <xs:complexType>
+      <xs:sequence>
+	<xs:element name="to" type="xs:string"/>
+	<xs:element name="from" type="xs:string"/>
+	<xs:element name="heading" type="xs:string"/>
+	<xs:element name="body" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+</xs:schema>
+```
+
+4. 对XSD的引用：
+
+``` xml
+<?xml version="1.0"?>
+<note
+xmlns="http://www.w3school.com.cn"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.w3school.com.cn note.xsd">
+
+<to>George</to>
+<from>John</from>
+<heading>Reminder</heading>
+<body>Don't forget the meeting!</body>
+</note>
+```
+
+## XSD - `<schema>`元素
+1. `<schema>`元素是每一个XML Schema的根元素
+2. `<schema>`元素可包含属性。一个schema声明看上去类似于这样：
+
+``` xml
+<?xml version="1.0" encoding="utf-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.w3school.com.cn" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
+</schema>
+enter code here
+```
+	* `xmlns:xs="http://www.w3..."`显示schema中用到的元素和数据类型来自命名空间“http://www.w3...”,同时还规定来自该命名空间的元素和数据类型应该使用前缀xs.
+	* `targetNamespace="http://www.w3cschool..."`显示被此schema定义的元素(使用该schema的xml中的元素)来自命名空间“http://www.w3...”
+	* `xmlns=“http://...`指定默认的命名空间是”。。。“
+	* `elementFormDefault="qualified"`指出任何xml实例文档所使用的且在此schema中声明过得元素必须被命名空间限定
 
 ## XSD简单元素
 1. 简单元素是指只包含文本的元素。它不会包含任何其他元素或者属性
