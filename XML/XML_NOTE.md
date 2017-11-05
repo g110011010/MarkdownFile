@@ -151,4 +151,31 @@ enter code here
 2. 
 ## Course 4 XSD
 1. XML具有面向对象的特点
-2. 
+
+## Course 5 
+1. `complexContent`:意味着当前复杂类型是在原有的复杂类型的基础上做的扩展。
+2. `base`表示继承自其它复杂类型
+
+``` xml
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="">
+    <xs:element name="persons" >
+        <xs:complexType>
+        <xs:sequence>
+            <xs:element name="person" minOccurs="1" maxOccurs="3">
+                <!--拥有属性的元素是复杂类型，应该位于complexType内部-->
+                <xs:complexType>
+                    <!--属性没有顺序，不应该放置在sequence内部-->
+                    <!--<xs:attribute name="hello" type="xs:string"/>--><!--会报错-->
+                    <xs:sequence>
+                        <xs:element name="full_name" type="xs:string" />
+                        <xs:element name="child_name" type="xs:string" minOccurs="0" maxOccurs="5"/>
+                    </xs:sequence>
+                    <xs:attribute name="id" type="xs:string"/><!--向元素添加一个属性，属性的位置只能是在这个地方，不能出现在sequences前面-->
+                </xs:complexType>
+            </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+```
